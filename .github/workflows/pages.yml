@@ -5,12 +5,12 @@ on:
   workflow_run:
     workflows: ["Render Meeting Backgrounds"]
     types: [completed]
-  # Manual publish — use this for the first deploy.
+  # Manual publish (always deploys, ignoring the change check below).
   workflow_dispatch:
 
-# Pages deploys need these; read-only contents is enough to check out the images.
 permissions:
   contents: read
+  deployments: read
   pages: write
   id-token: write
 
@@ -21,32 +21,59 @@ concurrency:
 
 jobs:
   build:
-    # On a render-triggered run, only build when the render actually succeeded.
+    # On a render-triggered run, only proceed when the render actually succeeded.
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.gate.outputs.deploy }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Skip the ~480 MB rebuild/upload when nothing changed: a no-op render makes
+      # no commit, so HEAD still matches the last Pages deployment. Manual runs and
+      # the first deploy always go through.
+      - name: Decide whether to (re)deploy
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "manual dispatch -> deploy"
+            echo "deploy=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          last=$(gh api "repos/${{ github.repository }}/deployments?environment=github-pages&per_page=1" \
+                   --jq '.[0].sha // ""' 2>/dev/null || true)
+          cur=$(git rev-parse HEAD)
+          if [ -n "$last" ] && [ "$last" = "$cur" ]; then
+            echo "HEAD $cur already deployed -> skip"
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed (last='$last' cur='$cur') -> deploy"
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Configure Pages
+        if: steps.gate.outputs.deploy == 'true'
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Build gallery site
+        if: steps.gate.outputs.deploy == 'true'
         run: |
           mkdir -p _site
           cp -r staff _site/staff
           rm -f _site/staff/manifest.json
-          perl -Ilib scripts/build_gallery.pl > _site/index.html
+          perl -Ilib scripts/build_gallery.pl _site
 
       - name: Upload Pages artifact
+        if: steps.gate.outputs.deploy == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
   deploy:
     needs: build
+    if: needs.build.outputs.deploy == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

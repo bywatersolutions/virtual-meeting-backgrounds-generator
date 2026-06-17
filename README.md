@@ -62,18 +62,25 @@ the `BWS_DEVOPS_EXTERNAL_SERVICE` secret to get through.
 ## Gallery (GitHub Pages)
 
 `.github/workflows/pages.yml` publishes a browse-and-download gallery to GitHub
-Pages. `scripts/build_gallery.pl` reads `staff/manifest.json` and emits an
-`index.html` — one card per person (name + title) with a lazy-loaded thumbnail
-and download link for each template, plus a name filter so people can find
-themselves without loading every image. The workflow assembles `_site/`
-(that `index.html` + the `staff/` PNGs) and deploys it.
+Pages. `scripts/build_gallery.pl` reads `staff/manifest.json` and writes a static
+site into `_site/`:
+
+- `index.html` — a light **landing page that's just a filterable list of names**
+  (name + title), no images, so it loads instantly.
+- `people/<slug>.html` — one page per person with their backgrounds and a download
+  link for each. Each name on the landing page links here.
+
+The workflow drops the `staff/` PNGs into `_site/` alongside those pages and deploys.
 
 It runs after each successful render (via `workflow_run`) so the gallery stays in
-sync, and on demand via **Run workflow**. First-time setup: enable Pages once
-(Settings → Pages → Source: **GitHub Actions**), then run the workflow manually
-for the initial deploy. The gallery is **public** (this is a public repo on the
-Free plan, where Pages can't be access-restricted); the underlying names/titles
-are already public on the team page.
+sync, and on demand via **Run workflow**. To avoid re-uploading the whole site on
+no-op nights, it **skips the deploy when nothing changed** — a no-op render makes
+no commit, so `HEAD` still matches the last Pages deployment (manual runs always
+deploy). First-time setup is done: Pages is enabled with Source **GitHub Actions**.
+The gallery is **public** (public repo on the Free plan, where Pages can't be
+access-restricted); the underlying names/titles are already public on the team page.
+
+Live at: `https://bywatersolutions.github.io/virtual-meeting-backgrounds-generator/`
 
 ## Creating a new template
 
