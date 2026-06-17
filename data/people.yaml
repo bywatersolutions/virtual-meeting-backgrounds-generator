@@ -1,0 +1,154 @@
+---
+- name: Adam (AJ) Jarrell
+  slug: Adam-AJ-Jarrell
+  title: System Admin
+- name: Adam Brooks
+  slug: Adam-Brooks
+  title: Head of Sales
+- name: Alyssa Drake
+  slug: Alyssa-Drake
+  title: Support
+- name: Andrew Fuerste-Henry
+  slug: Andrew-Fuerste-Henry
+  title: Pipeline Coordinator
+- name: Brendan Gallagher
+  slug: Brendan-Gallagher
+  title: CEO
+- name: Brian Pichman
+  slug: Brian-Pichman
+  title: Head of Partner Success & Outreach
+- name: Cassidy Miller
+  slug: Cassidy-Miller
+  title: Educator
+- name: Catrina Berka
+  slug: Catrina-Berka
+  title: Lead Educator
+- name: Cindy Norman
+  slug: Cindy-Norman
+  title: Business Manager
+- name: Danielle Meininger
+  slug: Danielle-Meininger
+  title: Support II
+- name: Donna Bachowski
+  slug: Donna-Bachowski
+  title: Director of Implementations
+- name: Elise Aiello
+  slug: Elise-Aiello
+  title: Marketing Executive
+- name: Elise Konya
+  slug: Elise-Konya
+  title: Project Manager
+- name: Elizabeth McArthur
+  slug: Elizabeth-McArthur
+  title: Data Migration Specialist
+- name: Emmanuel Fulton
+  slug: Emmanuel-Fulton
+  title: Systems Administrator I
+- name: Enica Davis
+  slug: Enica-Davis
+  title: Lead Data Migration Specialist
+- name: Eric Swenson
+  slug: Eric-Swenson
+  title: Implementation Support
+- name: Esther Melander
+  slug: Esther-Melander
+  title: Educator
+- name: Evelyn Hartline
+  slug: Evelyn-Hartline
+  title: Security Operations Admin
+- name: Heather Harmon
+  slug: Heather-Harmon
+  title: Project Coordinator
+- name: Hebah Amin-Headley
+  slug: Hebah-Amin-Headley
+  title: Educator
+- name: Holly Mills
+  slug: Holly-Mills
+  title: Educator
+- name: Ian Walls
+  slug: Ian-Walls
+  title: Head of Special Projects
+- name: Imani Thomas
+  slug: Imani-Thomas
+  title: Developer II
+- name: Jesse Maseto
+  slug: Jesse-Maseto
+  title: Systems Ninja
+- name: Jessie Zairo
+  slug: Jessie-Zairo
+  title: Vice President of Strategic Partnerships
+- name: Jonah Wilson
+  slug: Jonah-Wilson
+  title: Developer
+- name: Kellie Stephens
+  slug: Kellie-Stephens
+  title: Sales Development Coordinator
+- name: Kendra Little
+  slug: Kendra-Little
+  title: Linux Systems Administrator
+- name: Krikor Makhdoumian
+  slug: Krikor-Makhdoumian
+  title: Linux System Administrator
+- name: Kyle Hall
+  slug: Kyle-Hall
+  title: Director of Development & Operations
+- name: Laura Escamilla
+  slug: Laura-Escamilla
+  title: Developer
+- name: Laura O'Neil
+  slug: Laura-O-Neil
+  title: Operations Analyst
+- name: Lisette Scheer
+  slug: Lisette-Scheer
+  title: Developer
+- name: Lucas Gass
+  slug: Lucas-Gass
+  title: Developer
+- name: Mark Miller
+  slug: Mark-Miller
+  title: Data Migration Librarian
+- name: Michael Adamyk
+  slug: Michael-Adamyk
+  title: Educator
+- name: Michael Kucsak
+  slug: Michael-Kucsak
+  title: COO
+- name: Michael Maurakis
+  slug: Michael-Maurakis
+  title: Linux Administrator I
+- name: Nathan Curulla
+  slug: Nathan-Curulla
+  title: CRO
+- name: Nick Clemens
+  slug: Nick-Clemens
+  title: Head of Development
+- name: Sara Brown
+  slug: Sara-Brown
+  title: Educator
+- name: Sara Porter
+  slug: Sara-Porter
+  title: Data Migration Specialist
+- name: Sarah Maseto
+  slug: Sarah-Maseto
+  title: Assistant Business Manager
+- name: Shipra Poojary
+  slug: Shipra-Poojary
+  title: Support II
+- name: Todd Goatley-Seals
+  slug: Todd-Goatley-Seals
+  title: Head of Support and Koha Evangelist
+- name: Tomas Cohen Arazi
+  slug: Tomas-Cohen-Arazi
+  title: Developer
+- name: Tristin Stagg
+  slug: Tristin-Stagg
+  title: Lead Systems Administrator
+- name: Valerie Burnett
+  slug: Valerie-Burnett
+  title: Data Migration Librarian
+- name: Yanjun Li
+  slug: Yanjun-Li
+  title: Developer II
+- name: Yannis Kwon
+  slug: Yannis-Kwon
+  title: Support 1
