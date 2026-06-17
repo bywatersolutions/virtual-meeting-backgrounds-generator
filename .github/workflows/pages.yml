@@ -1,0 +1,57 @@
+name: Publish gallery to Pages
+
+on:
+  # Re-publish after each successful render so the gallery stays in sync.
+  workflow_run:
+    workflows: ["Render Meeting Backgrounds"]
+    types: [completed]
+  # Manual publish — use this for the first deploy.
+  workflow_dispatch:
+
+# Pages deploys need these; read-only contents is enough to check out the images.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One Pages deployment at a time.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # On a render-triggered run, only build when the render actually succeeded.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Build gallery site
+        run: |
+          mkdir -p _site
+          cp -r staff _site/staff
+          rm -f _site/staff/manifest.json
+          perl -Ilib scripts/build_gallery.pl > _site/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

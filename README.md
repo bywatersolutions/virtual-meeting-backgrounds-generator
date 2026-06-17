@@ -54,8 +54,26 @@ Rendering shells out to **`rsvg-convert`** (librsvg). See "Why Perl + rsvg" belo
 | Nightly cron (`07:00 UTC`) | Someone **added/removed/re-titled** on the website → renders new people, refreshes changed titles, prunes departed ones. |
 | Manual (`workflow_dispatch`, optional `force`) | On-demand run; `force: true` re-renders everything regardless of fingerprints. |
 
-The job then commits anything new under `staff/` back to the repo.
-Requires no secrets — it uses the built-in `GITHUB_TOKEN` (`permissions: contents: write`).
+The job then commits anything new under `staff/` back to the repo (using the
+built-in `GITHUB_TOKEN`, `permissions: contents: write`). The site's WAF blocks
+the runner, so the fetch step sends an `x-dev-ops-external-service` header from
+the `BWS_DEVOPS_EXTERNAL_SERVICE` secret to get through.
+
+## Gallery (GitHub Pages)
+
+`.github/workflows/pages.yml` publishes a browse-and-download gallery to GitHub
+Pages. `scripts/build_gallery.pl` reads `staff/manifest.json` and emits an
+`index.html` — one card per person (name + title) with a lazy-loaded thumbnail
+and download link for each template, plus a name filter so people can find
+themselves without loading every image. The workflow assembles `_site/`
+(that `index.html` + the `staff/` PNGs) and deploys it.
+
+It runs after each successful render (via `workflow_run`) so the gallery stays in
+sync, and on demand via **Run workflow**. First-time setup: enable Pages once
+(Settings → Pages → Source: **GitHub Actions**), then run the workflow manually
+for the initial deploy. The gallery is **public** (this is a public repo on the
+Free plan, where Pages can't be access-restricted); the underlying names/titles
+are already public on the team page.
 
 ## Creating a new template
 
