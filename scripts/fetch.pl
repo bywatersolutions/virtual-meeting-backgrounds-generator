@@ -63,7 +63,15 @@ sub fetch_html {
     my $ua = Mojo::UserAgent->new;
     $ua->transactor->name('Background-Bot/1.0');
     $ua->max_redirects(5);
-    my $res = $ua->get($url)->result;
+
+    # In CI the runner's traffic is 403'd by the site's WAF; send the devops
+    # bypass header (value from the BWS_DEVOPS_EXTERNAL_SERVICE secret) so the
+    # request is allowed. Unset for local/file runs, so the header is omitted.
+    my %headers;
+    $headers{'x-dev-ops-external-service'} = $ENV{BWS_DEVOPS_EXTERNAL_SERVICE}
+        if length( $ENV{BWS_DEVOPS_EXTERNAL_SERVICE} // '' );
+
+    my $res = $ua->get( $url => \%headers )->result;
     die "Fetch failed: " . $res->code . " " . $res->message . "\n" unless $res->is_success;
     return $res->body;
 }

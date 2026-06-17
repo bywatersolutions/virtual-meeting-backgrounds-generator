@@ -39,6 +39,8 @@ jobs:
         run: make deps
 
       - name: Fetch team data
+        env:
+          BWS_DEVOPS_EXTERNAL_SERVICE: ${{ secrets.BWS_DEVOPS_EXTERNAL_SERVICE }}
         run: make fetch
 
       - name: Render backgrounds
