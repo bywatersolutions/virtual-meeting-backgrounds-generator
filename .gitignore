@@ -1,0 +1,8 @@
+# transient render artifacts
+*.tmp.svg
+
+# PR preview output (CI artifact only, never committed)
+preview/
+
+# macOS noise
+.DS_Store

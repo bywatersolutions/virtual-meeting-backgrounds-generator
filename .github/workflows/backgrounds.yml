@@ -1,0 +1,50 @@
+name: Render Zoom Backgrounds
+
+on:
+  # Build when a template, the logo, or the script changes (e.g. a new template added).
+  push:
+    branches: [ main ]
+    paths:
+      - 'templates/**'
+      - 'assets/**'
+      - 'scripts/**'
+      - '.github/workflows/backgrounds.yml'
+  # Nightly catch-up for people added to / removed from the website.
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC daily
+  # Manual run, with an option to force a full re-render.
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-render everything (ignore stored fingerprints)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Never let two renders push at the same time.
+concurrency:
+  group: render-zoom-backgrounds
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: make deps
+
+      - name: Fetch team data
+        run: make fetch
+
+      - name: Render backgrounds
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && '1' || '' }}
+        run: make render
+
+      - name: Commit & push changes
+        run: make commit

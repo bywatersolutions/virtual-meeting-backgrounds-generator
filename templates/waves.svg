@@ -1,0 +1,50 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!--
+    ByWater Zoom background template: "waves"
+    Placeholders filled by scripts/generate.pl:
+      {{NAME}}        - person's name (raw)
+      {{TITLE}}       - person's title (raw)
+      {{NAME_UPPER}}  - name in UPPERCASE
+      {{TITLE_UPPER}} - title in UPPERCASE
+      {{LOGO}}        - data: URI of assets/bywater_logo.png
+    Copy this file to make a new template; keep the placeholders you want.
+  -->
+  <defs>
+    <linearGradient id="base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0A1726"/>
+      <stop offset="100%" stop-color="#0C2238"/>
+    </linearGradient>
+    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#11314F"/><stop offset="100%" stop-color="#173E63"/>
+    </linearGradient>
+    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1C4A74"/><stop offset="100%" stop-color="#2A659A"/>
+    </linearGradient>
+    <linearGradient id="b3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2E6FA6"/><stop offset="100%" stop-color="#4E8AC2"/>
+    </linearGradient>
+    <linearGradient id="b4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5C97CC"/><stop offset="100%" stop-color="#9CC6E6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#base)"/>
+
+  <path d="M-50,470 C 380,360 760,560 1180,470 C 1520,398 1760,470 1970,420 L1970,1130 L-50,1130 Z" fill="url(#b1)" opacity="0.9"/>
+  <path d="M-50,610 C 360,500 780,690 1200,600 C 1540,528 1770,600 1970,560 L1970,1130 L-50,1130 Z" fill="url(#b2)" opacity="0.92"/>
+  <path d="M-50,770 C 400,660 800,840 1240,760 C 1560,690 1780,755 1970,720 L1970,1130 L-50,1130 Z" fill="url(#b3)" opacity="0.92"/>
+  <path d="M-50,930 C 420,840 820,980 1280,915 C 1580,872 1790,910 1970,888 L1970,1130 L-50,1130 Z" fill="url(#b4)" opacity="0.95"/>
+
+  <path d="M-50,470 C 380,360 760,560 1180,470 C 1520,398 1760,470 1970,420" fill="none" stroke="#9CC6E6" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M-50,770 C 400,660 800,840 1240,760 C 1560,690 1780,755 1970,720" fill="none" stroke="#BFE0F4" stroke-opacity="0.20" stroke-width="2"/>
+
+  <!-- Upper-left: name + title -->
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <rect x="60" y="62" width="8" height="118" rx="4" fill="#4E8AC2"/>
+    <text x="96" y="124" font-size="68" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">{{NAME}}</text>
+    <text x="98" y="172" font-size="30" font-weight="400" fill="#AECBE6" letter-spacing="2.5">{{TITLE_UPPER}}</text>
+  </g>
+
+  <!-- Upper-right: ByWater logo -->
+  <image x="1496" y="96" width="360" height="114.2" xlink:href="{{LOGO}}" href="{{LOGO}}"/>
+</svg>

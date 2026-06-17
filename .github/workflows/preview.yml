@@ -1,0 +1,65 @@
+name: Preview Backgrounds (PR)
+
+# Renders ONE synthetic sample person for every template so reviewers can eyeball
+# template changes without touching the committed staff/ output.
+on:
+  pull_request:
+    paths:
+      - 'templates/**'
+      - 'assets/**'
+      - 'scripts/**'
+      - 'lib/**'
+      - '.github/workflows/preview.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: make deps
+
+      - name: Run tests
+        run: make test
+
+      - name: Render preview (sample person, all templates)
+        run: make preview
+
+      - name: Upload preview images
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: zoom-background-preview
+          path: preview/**/*.png
+          if-no-files-found: error
+
+      - name: Comment with preview link
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = [
+              '**Zoom background preview** rendered for a sample person across all templates.',
+              '',
+              `Download the **zoom-background-preview** artifact from [this run](${url}) to review the output.`,
+            ].join('\n');
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number,
+            });
+            const marker = '**Zoom background preview**';
+            const existing = comments.find(c => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner, repo: context.repo.repo, comment_id: existing.id, body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number, body,
+              });
+            }

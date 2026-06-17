@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Who We Are</title></head>
+<body>
+  <h1>Who We Are</h1>
+  <p>This intro paragraph has no class and must be ignored.</p>
+
+  <!-- NOTE: synthetic test data only — these are not real ByWater staff.
+       Obviously-fictional names so rendered output can never be mistaken for the
+       live team. Each entry exercises a specific parser case (see t/parse.t). -->
+
+  <div class="team-member">
+    <p class="name">Ada Lovelace</p>
+    <p class="title">Test Engineer</p>
+    <p class="bio">Bio text that should not be parsed.</p>
+  </div>
+
+  <div class="team-member">
+    <p class="name">Alan M. Turing</p>
+    <p class="title">Co-Owner &amp; Chief Executive Officer</p>
+    <p class="bio">Another bio.</p>
+  </div>
+
+  <div class="team-member">
+    <p class="name">Zoë Example</p>
+    <p class="title">Data Migration Librarian</p>
+  </div>
+
+  <!-- a person with extra whitespace to exercise squish() -->
+  <div class="team-member">
+    <p class="name">   Grace   Hopper  </p>
+    <p class="title">  Director of Migrations  </p>
+  </div>
+
+  <footer><p class="title">Footer title with no preceding name — ignored.</p></footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- ByWater Zoom background template: "minimal". See waves.svg for placeholder docs. -->
+  <defs>
+    <linearGradient id="base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0C2238"/>
+      <stop offset="100%" stop-color="#11314F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#base)"/>
+
+  <!-- single subtle wave along the bottom -->
+  <path d="M-50,980 C 480,900 980,1040 1480,960 C 1700,924 1850,950 1970,936 L1970,1130 L-50,1130 Z"
+        fill="#1C4A74" opacity="0.55"/>
+
+  <!-- Upper-left: name + title -->
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <rect x="60" y="62" width="8" height="118" rx="4" fill="#4E8AC2"/>
+    <text x="96" y="124" font-size="68" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">{{NAME}}</text>
+    <text x="98" y="172" font-size="30" font-weight="400" fill="#AECBE6" letter-spacing="2.5">{{TITLE_UPPER}}</text>
+  </g>
+
+  <!-- Upper-right: ByWater logo -->
+  <image x="1496" y="96" width="360" height="114.2" xlink:href="{{LOGO}}" href="{{LOGO}}"/>
+</svg>

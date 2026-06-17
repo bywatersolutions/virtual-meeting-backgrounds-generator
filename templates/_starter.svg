@@ -1,0 +1,36 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!--
+    STARTER TEMPLATE — copy me to make a new background.
+
+    Files whose name starts with '_' are scaffolds: the generator never renders
+    them. To create a real template, copy this file to a non-underscore name,
+    e.g. templates/zoom.svg or templates/google-meet.svg. The file's base name
+    becomes the PNG name under staff/<person>/ (zoom.svg -> staff/<person>/zoom.png).
+
+    SIZE: keep this 1920x1080 (16:9). Every major platform (Zoom, Teams, Google
+    Meet, etc.) uses that size, and the generator always renders at 1920x1080, so
+    design to this canvas. Output PNGs are kept under 5 MB (Zoom's upload limit);
+    if you embed a large raster image and the PNG exceeds that, the run fails.
+
+    PLACEHOLDERS (filled per person by scripts/generate.pl):
+      {{NAME}}        - person's name (raw)
+      {{TITLE}}       - person's title (raw)
+      {{NAME_UPPER}}  - name in UPPERCASE
+      {{TITLE_UPPER}} - title in UPPERCASE
+      {{LOGO}}        - data: URI of assets/bywater_logo.png
+    Use only the placeholders you want; unknown ones are left as-is. A person is
+    re-rendered whenever this file, their title, or the logo changes.
+  -->
+
+  <!-- Background. Replace with your own design (gradients, waves, art, etc.). -->
+  <rect width="1920" height="1080" fill="#0B1F33"/>
+
+  <!-- Upper-left: name + title -->
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <text x="96" y="124" font-size="68" font-weight="700" fill="#FFFFFF">{{NAME}}</text>
+    <text x="98" y="172" font-size="30" font-weight="400" fill="#AECBE6" letter-spacing="2.5">{{TITLE_UPPER}}</text>
+  </g>
+
+  <!-- Upper-right: ByWater logo (both href spellings for renderer compatibility) -->
+  <image x="1496" y="96" width="360" height="114.2" xlink:href="{{LOGO}}" href="{{LOGO}}"/>
+</svg>
