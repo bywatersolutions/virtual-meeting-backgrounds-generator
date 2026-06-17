@@ -78,6 +78,7 @@ sub head {
   ul.people a:hover { background:var(--card); border-color:#1d3a55; }
   ul.people .title { color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:1px; }
   .title { color:var(--muted); }
+  .note { color:var(--muted); font-size:13px; margin:6px 0 0; }
   .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
   figure { margin:0; }
   figure img { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;
@@ -101,7 +102,7 @@ print {$idx} <<"HDR";
 <body>
 <header>
   <h1>ByWater Virtual Meeting Backgrounds</h1>
-  <p>Find your name, open your page, and download a background to use in Zoom, Teams, Google Meet, etc. Every image is 1920&times;1080.</p>
+  <p>Find your name, open your page, and download a background to use in Zoom, Teams, Google Meet, etc. Backgrounds are 1920&times;1080 (16:9); the <strong>-original</strong> ones are 1440&times;1080 (4:3) for Zoom&rsquo;s &ldquo;Original Ratio&rdquo; setting.</p>
   <input id="q" type="search" placeholder="Filter by name…" autocomplete="off" aria-label="Filter by name">
 </header>
 <main>
@@ -151,6 +152,7 @@ for my $p (@people) {
     print {$pg} qq{  <p><a class="back" href="../index.html">&larr; All names</a></p>\n};
     print {$pg} qq{  <h1>$name</h1>\n};
     print {$pg} qq{  <p class="title">$title</p>\n} if length $title;
+    print {$pg} qq{  <p class="note">Files marked <strong>-original</strong> are 4:3 (for Zoom&rsquo;s &ldquo;Original Ratio&rdquo;); the rest are 16:9.</p>\n};
     print {$pg} qq{</header>\n<main>\n  <div class="grid">\n};
     for my $tpl ( sort keys %{ $p->{renders} || {} } ) {
         my $href  = url_path("../staff/$p->{slug}/$tpl.png");

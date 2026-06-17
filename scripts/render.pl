@@ -11,10 +11,11 @@
 #      name + title + logo) is stored in the manifest; a background is re-rendered
 #      only if that fingerprint changed, the PNG is missing, or FORCE=1 is set.
 #
-# Every background is rendered at 1920x1080 (16:9) — the size every major platform
-# (Zoom, Teams, Google Meet, etc.) uses — and kept under a 5 MB file-size cap so it
-# uploads everywhere (Zoom rejects backgrounds over 5 MB). Oversized PNGs are
-# optimized with pngquant when available, and the run fails if one still won't fit.
+# Each template renders at its own size: 16:9 templates are 1920x1080 (the default
+# Zoom/Teams/Meet size) and the 4:3 "-original" templates are 1440x1080 (for Zoom's
+# opt-in Original Ratio). Each PNG is kept under a 5 MB file-size cap so it uploads
+# everywhere (Zoom rejects backgrounds over 5 MB); oversized PNGs are optimized with
+# pngquant when available, and the run fails if one still won't fit.
 # Rendering shells out to `rsvg-convert` (librsvg). See README "Why Perl + rsvg".
 #
 # Environment overrides:
@@ -22,7 +23,7 @@
 #   OUTPUT_DIR   output directory (default: <repo>/staff) — handy for previews
 #   FORCE        truthy => re-render even if nothing changed
 #   DRY_RUN      truthy => report the people; no prune, no render
-#   WIDTH/HEIGHT output size (default 1920x1080)
+#   WIDTH/HEIGHT optional output-size override (default: the template's own size)
 #   MAX_BYTES    per-file size cap in bytes (default 5_000_000)
 #
 use strict;
@@ -49,8 +50,8 @@ my $TEMPLATE_DIR = "$ROOT/templates";
 my $LOGO_PATH    = "$ROOT/assets/bywater_logo.png";
 my $PEOPLE_FILE  = $ENV{PEOPLE_FILE} // "$ROOT/data/people.yaml";
 my $OUTPUT_DIR   = $ENV{OUTPUT_DIR}  // "$ROOT/staff";
-my $WIDTH        = $ENV{WIDTH}  // 1920;   # 16:9 — the size every major platform uses
-my $HEIGHT       = $ENV{HEIGHT} // 1080;
+my $WIDTH        = $ENV{WIDTH};    # optional override; default = the template's own size
+my $HEIGHT       = $ENV{HEIGHT};
 my $MAX_BYTES    = $ENV{MAX_BYTES} // 5_000_000;   # per-file cap; Zoom rejects > 5 MB
 my $FORCE        = $ENV{FORCE}   ? 1 : 0;
 my $DRY_RUN      = $ENV{DRY_RUN} ? 1 : 0;
@@ -156,8 +157,8 @@ sub fill_one {
     });
 }
 
-# Rasterize a filled SVG string to a 1920x1080 PNG via rsvg-convert, then make
-# sure it fits under the platform file-size cap.
+# Rasterize a filled SVG string to a PNG via rsvg-convert at the template's own
+# size (unless WIDTH/HEIGHT override it), then make sure it fits under the cap.
 sub rasterize {
     my ($filled, $out) = @_;
     my $tmp = "$out.tmp.svg";
@@ -165,7 +166,10 @@ sub rasterize {
     print $fh $filled;
     close $fh;
 
-    my $rc = system('rsvg-convert', '-w', $WIDTH, '-h', $HEIGHT, '-o', $out, $tmp);
+    my @size;
+    push @size, '-w', $WIDTH  if defined $WIDTH;
+    push @size, '-h', $HEIGHT if defined $HEIGHT;
+    my $rc = system('rsvg-convert', @size, '-o', $out, $tmp);
     unlink $tmp;
     die "rsvg-convert failed (exit @{[ $rc >> 8 ]}) for $out\n" if $rc != 0;
 

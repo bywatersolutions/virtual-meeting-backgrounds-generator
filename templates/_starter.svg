@@ -7,10 +7,11 @@
     e.g. templates/zoom.svg or templates/google-meet.svg. The file's base name
     becomes the PNG name under staff/<person>/ (zoom.svg -> staff/<person>/zoom.png).
 
-    SIZE: keep this 1920x1080 (16:9). Every major platform (Zoom, Teams, Google
-    Meet, etc.) uses that size, and the generator always renders at 1920x1080, so
-    design to this canvas. Output PNGs are kept under 5 MB (Zoom's upload limit);
-    if you embed a large raster image and the PNG exceeds that, the run fails.
+    SIZE: this is 1920x1080 (16:9), the default Zoom/Teams/Meet size; each template
+    renders at the width/height on its <svg> root. For Zoom's opt-in Original Ratio,
+    add a 4:3 (1440x1080) copy named <name>-original.svg (right-align the logo to the
+    narrower canvas). Output PNGs are kept under 5 MB (Zoom's upload limit); if you
+    embed a large raster image and the PNG exceeds that, the run fails.
 
     PLACEHOLDERS (filled per person by scripts/generate.pl):
       {{NAME}}        - person's name (raw)

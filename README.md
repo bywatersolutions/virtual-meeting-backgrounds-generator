@@ -37,10 +37,11 @@ and **title** (`p.title`), and writes them to **`data/people.yaml`** (sorted by 
    name + title + logo); a background is re-rendered when that fingerprint
    changes (a re-titled person, an edited template, a swapped logo), when the PNG
    is missing, or when `FORCE=1` is set. Unchanged people are skipped.
-3. Renders every background at **1920×1080 (16:9)** — the size every major
-   platform (Zoom, Teams, Google Meet, …) uses — and keeps each PNG **under 5 MB**
-   so it uploads everywhere (Zoom rejects backgrounds over 5 MB). Oversized files
-   are optimized with `pngquant`; the run fails if one still won't fit.
+3. Renders each template at **its own size**: 16:9 templates at **1920×1080** (the
+   default Zoom/Teams/Meet size) and the `-original` templates at **1440×1080**
+   (4:3, for Zoom's opt-in Original Ratio). Each PNG is kept **under 5 MB** so it
+   uploads everywhere (Zoom rejects backgrounds over 5 MB); oversized files are
+   optimized with `pngquant` and the run fails if one still won't fit.
 4. Writes `staff/manifest.json` listing everyone currently rendered, with the
    per-template fingerprints used to decide what to skip next run.
 
@@ -103,10 +104,14 @@ are left untouched. The filename (minus `.svg`) becomes the PNG name, so
 
 - **Scaffolds**: any template whose name starts with `_` (like `_starter.svg`) is
   never rendered — it's there to copy from.
-- **Sizing**: design to **1920×1080 (16:9)** — the size every major platform
-  (Zoom, Teams, Meet) uses; the generator always renders at 1920×1080. Keep the
+- **Sizing**: each template renders at the `width`/`height` on its `<svg>` root.
+  Design to **1920×1080 (16:9)** — the default Zoom/Teams/Meet size. Keep the
   camera-safe area (your face is usually center / center-right) clear — these
   designs put text top-left and the logo top-right for that reason.
+- **Original Ratio (4:3)**: for people who enable Zoom's opt-in Original Ratio,
+  ship a 4:3 (**1440×1080**) variant named `<name>-original.svg` (right-align the
+  logo to the narrower canvas). Both ratios then render for everyone, e.g.
+  `waves.svg` + `waves-original.svg` → `waves.png` + `waves-original.png`.
 - **File size**: output PNGs are kept **under 5 MB** (Zoom's limit). Plain vector
   designs are tiny; if you embed a large raster image and the PNG exceeds 5 MB the
   run fails, so simplify it (or raise `MAX_BYTES`).
@@ -138,7 +143,8 @@ OUTPUT_DIR=/tmp/bw perl -Ilib scripts/render.pl      # render into a different d
 
 Stage 1 honors `ABOUT_URL` (http(s), `file://`, or a local path) and `PEOPLE_FILE`
 (default `data/people.yaml`). Stage 2 honors `PEOPLE_FILE`, `OUTPUT_DIR` (default
-`staff/`), `WIDTH`/`HEIGHT` (default `1920`/`1080`), and `MAX_BYTES` (default
+`staff/`), `WIDTH`/`HEIGHT` (optional override; default is the template's own
+size), and `MAX_BYTES` (default
 `5000000`).
 
 ## Tests
