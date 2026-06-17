@@ -35,7 +35,7 @@ jobs:
         id: upload
         uses: actions/upload-artifact@v4
         with:
-          name: zoom-background-preview
+          name: background-preview
           path: preview/**/*.png
           if-no-files-found: error
 
@@ -45,14 +45,14 @@ jobs:
           script: |
             const url = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = [
-              '**Zoom background preview** rendered for a sample person across all templates.',
+              '**Background preview** rendered for a sample person across all templates.',
               '',
-              `Download the **zoom-background-preview** artifact from [this run](${url}) to review the output.`,
+              `Download the **background-preview** artifact from [this run](${url}) to review the output.`,
             ].join('\n');
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number,
             });
-            const marker = '**Zoom background preview**';
+            const marker = '**Background preview**';
             const existing = comments.find(c => c.body && c.body.includes(marker));
             if (existing) {
               await github.rest.issues.updateComment({

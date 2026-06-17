@@ -141,7 +141,7 @@ and `perl -c` work even without them installed. The site-specific scraping
 `.github/workflows/preview.yml` runs on pull requests that touch
 `templates/`, `assets/`, `scripts/`, or `lib/`. It runs the tests, then renders a
 single **synthetic sample person** (`test/fixtures/preview-person.html`) for
-every template into `preview/` and uploads it as the **`zoom-background-preview`**
+every template into `preview/` and uploads it as the **`background-preview`**
 artifact, plus drops a PR comment linking to it. Nothing under `staff/` is
 touched, so you can review how a template change looks before merging.
 
