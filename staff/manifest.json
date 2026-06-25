@@ -2,11 +2,20 @@
    {
       "name" : "Adam (AJ) Jarrell",
       "renders" : {
+         "foreground-dark" : "83b31604ee7b2f4ad38cfdf405424ecbeda4e72b",
+         "foreground-dark-original" : "bb1fa1700e07b38c1e3a68876b234b10d5e76eea",
+         "foreground-light" : "d024a1df6c4bad651b654cbf3cf6c5f0c1a3ecfa",
+         "foreground-light-original" : "d6ce5efea0cf74134573fb002591dca3c63b90ea",
          "lotr-rivendell" : "c0a024732ac668ae2a83239e7f33fd948c962482",
+         "lotr-rivendell-original" : "c40a28634366b11b8c6f282170641e0cb0ad9f19",
          "lotr-shire" : "6611d4206874873208cc8a958b78e1e246f91119",
+         "lotr-shire-original" : "296f3a2f7299a6c8a3e2ccbaab22d3d0cfd8b75a",
          "lotr-valley" : "f90097c9640e199bc21c0b1581d4ce9cf488fde1",
+         "lotr-valley-original" : "77c06a7ee8566a8051f2b7c4d5d3775633207c73",
          "minimal" : "888ada1adab543738d19a1832508dffbb817bfa1",
-         "waves" : "77d82507ec3b4c2a713ad4b598f1c3671959a757"
+         "minimal-original" : "f44297733b9e4cce09aa6d0a613634d12f9187be",
+         "waves" : "a7226447c807e088128fc113756965e075077866",
+         "waves-original" : "b39c093824f2a75525817e6d18df7d3470862997"
       },
       "slug" : "Adam-AJ-Jarrell",
       "title" : "System Admin"
@@ -14,11 +23,20 @@
    {
       "name" : "Adam Brooks",
       "renders" : {
+         "foreground-dark" : "8ba67c89205253c8aa461f5b1f688d16e71af763",
+         "foreground-dark-original" : "3a04468e4fbe971c629c1718d65f2c08abb4f943",
+         "foreground-light" : "a6cdf8d7882731dfa93f65f066275c939f090887",
+         "foreground-light-original" : "fafb50db66d6940c53595ea3bac1f205f41bfabf",
          "lotr-rivendell" : "607ab1d5316c59113e7e04e7d8c19ff546afed4e",
+         "lotr-rivendell-original" : "256c506252e2145f52edb14e8031ff3564ce0da9",
          "lotr-shire" : "c227f8d475ea6a6e0ed4fa29f96b1d60de51cad2",
+         "lotr-shire-original" : "574d53378fa0722017aa109b9eb7ca6293a1720e",
          "lotr-valley" : "e2f0a893178d483f7ae6b2b3b2acb767f39070b6",
+         "lotr-valley-original" : "fdafaf874a82955f0c77a5f18f1140cf3b3f06d9",
          "minimal" : "ddf2438c42d227c6cccd0df652a5e9e7047f3cab",
-         "waves" : "02301b34573d0f84acd8fa10fdfa31da1a2f496e"
+         "minimal-original" : "6329a5367b61979334efc120189b973614807c1b",
+         "waves" : "913e9c68b4f535cf6e088cb870f3cc3521788da0",
+         "waves-original" : "d3e380f7ac19e9e4e872a56669027b066f78f95b"
       },
       "slug" : "Adam-Brooks",
       "title" : "Head of Sales"
@@ -26,11 +44,20 @@
    {
       "name" : "Alyssa Drake",
       "renders" : {
+         "foreground-dark" : "44d5cf01645a797841e30fcfcf2ab845cc253103",
+         "foreground-dark-original" : "187cd703d59d8e5304d089b293dfc1dbb3189614",
+         "foreground-light" : "f29136f90a186d05e9327e35f1d1e5728e24d2f1",
+         "foreground-light-original" : "37bece7bb58ca17f418ee49e098b72e8300b4de4",
          "lotr-rivendell" : "33c05ab0da51e22f60e6c446e0e147d9ede7933b",
+         "lotr-rivendell-original" : "8e441a79c5a6b3972187cecc8f41ac331eca47bc",
          "lotr-shire" : "817100106a4ea30ef6967bc79f481cb87dd3f99c",
+         "lotr-shire-original" : "acf0bb0d50d64618d3507139c17636e1da14fc43",
          "lotr-valley" : "156b1806bcb92a52e546833e7752095f73094032",
+         "lotr-valley-original" : "9e3df1f3dd2611f8bd4b91fae68ad9d640f7d55d",
          "minimal" : "b9c27f8ea1bdf9f04f9ffe897c5fc44088de35ff",
-         "waves" : "29507368fc4fd63920117ab62bc6d3328ca95540"
+         "minimal-original" : "06b665c897543caf2ea91241557f10c944112a68",
+         "waves" : "e7fc190459d1360cce8c5d881bf9503c695a5b37",
+         "waves-original" : "4c1530bd19a902bb19aff05869d6946e841a3c31"
       },
       "slug" : "Alyssa-Drake",
       "title" : "Support"
@@ -38,11 +65,20 @@
    {
       "name" : "Andrew Fuerste-Henry",
       "renders" : {
+         "foreground-dark" : "c4af0833f560ae3272f47c5376fba8dabfd78f94",
+         "foreground-dark-original" : "4059c4a8f23dce580ce6562a8e66e3970b433878",
+         "foreground-light" : "ea1eb1050adbac8b0e9133b4053449cba315dca4",
+         "foreground-light-original" : "cfdc9dd9c0a55c798e700898f28a142d7e1a706d",
          "lotr-rivendell" : "f4b2978dac4111d13270ac99c47afe465b3880eb",
+         "lotr-rivendell-original" : "8efd2b1a8d89e3cedef8c2874ef7c2f4d17c9ff2",
          "lotr-shire" : "c3b35d1f73c9af82abe92b3e117c4a90debb6f6a",
+         "lotr-shire-original" : "ae3294cf727bf6e934713590595d3da289e2db8b",
          "lotr-valley" : "2cb1d7cca5c4c6244a97b5824426f17c4444dc79",
+         "lotr-valley-original" : "f53a97cebe133ce6d429395cd41c5d249e19d0d2",
          "minimal" : "d3c58785156525f34d0947f318b9b8275293195a",
-         "waves" : "8de2803a1f77691f2cfd615d855d49e4397fc616"
+         "minimal-original" : "f00144b4716aba3302d0f2c35fac1db0c8cafe66",
+         "waves" : "ef39b3414673724b38903cb01a972b0f071b85fc",
+         "waves-original" : "d29e14feb928ccd4342d03d925c74663b3d60609"
       },
       "slug" : "Andrew-Fuerste-Henry",
       "title" : "Pipeline Coordinator"
@@ -50,11 +86,20 @@
    {
       "name" : "Brendan Gallagher",
       "renders" : {
+         "foreground-dark" : "260850e7e9ac1e27bcc1f0de5e0beb1e2ed10cea",
+         "foreground-dark-original" : "2b2d7d6464875648bdc6de5d11f1e9ea905bee5a",
+         "foreground-light" : "86704ca50efb4d2700380a2b7e7d4ae72f370def",
+         "foreground-light-original" : "e0a945647a3f45d293b464c0e9b9a5b2f001c852",
          "lotr-rivendell" : "2bf44ed0d36c1c8a77ccb3687b94ab36b797e89e",
+         "lotr-rivendell-original" : "3f984a50ced7d096864eb03ee114be5a702d7083",
          "lotr-shire" : "0e8383a9c16ba4310e4e9a3f1657f58b5952035a",
+         "lotr-shire-original" : "1124dea56a873898fdcfa86f37360b4e7e9f972e",
          "lotr-valley" : "ace1d5bae90de2b2c05104fbf89d629ad17a1955",
+         "lotr-valley-original" : "67befa1f74e4ef6859092d15ab486e480b38177d",
          "minimal" : "1bddd66076b51542c818131a902dc9140f8e5a12",
-         "waves" : "773c4b87b841e328a20cec5805b87abe37a5fc9d"
+         "minimal-original" : "4ba54fe0879d84a987f916b30d696d1741a11bae",
+         "waves" : "307655986302c90592903ab1fcabddc1696bf141",
+         "waves-original" : "ce9fff7036928bad92e618b3632edea34d5a42ed"
       },
       "slug" : "Brendan-Gallagher",
       "title" : "CEO"
@@ -62,11 +107,20 @@
    {
       "name" : "Brian Pichman",
       "renders" : {
+         "foreground-dark" : "2347e4d592a8f53f813400f5464ca2af844338cd",
+         "foreground-dark-original" : "ce42a0704b4e6c81a9a65445fd8ec7a90f22b0fb",
+         "foreground-light" : "9ccc1cd8d5f923edaa81e17445fd733f3615062e",
+         "foreground-light-original" : "db8f4d880fb6a05e07d2d8274c8f59620161e665",
          "lotr-rivendell" : "e6ea42e6edfb31826f2809b56b8c11df5c6b511b",
+         "lotr-rivendell-original" : "031babd342f9feb1f7520ed94317c0f3f2936491",
          "lotr-shire" : "6601848298a1e64b1c25a9e57326a1becd5c8338",
+         "lotr-shire-original" : "045685be082172266061c37c86d0db16d826075b",
          "lotr-valley" : "da656a4003c7570c6bfedc5765f3bbf5fb5e089a",
+         "lotr-valley-original" : "46dc86c0929a77621f6031e7b9469f4a52980db7",
          "minimal" : "7de1dc1edf07541e0f9dd0e7a79306fc51a26883",
-         "waves" : "82279e5bae5363f7bcdd21e0ed9ede1ed3733572"
+         "minimal-original" : "a532a6cdb32998a8bf4ab2190cd643f9a1e91a68",
+         "waves" : "57f68372ac8803f19979fbdb50aa5311e9ea6fb5",
+         "waves-original" : "d9384a464d40434c8f21f1411330f7171803ad87"
       },
       "slug" : "Brian-Pichman",
       "title" : "Head of Partner Success & Outreach"
@@ -74,11 +128,20 @@
    {
       "name" : "Cassidy Miller",
       "renders" : {
+         "foreground-dark" : "99805bd562b1cef207613cac6ac34acc689c267a",
+         "foreground-dark-original" : "accb45c819e6180a5f32b8ef8b985150bf098728",
+         "foreground-light" : "58b5f7e32915fa8382030b8916c220b7ff27a836",
+         "foreground-light-original" : "b5f7ad3cf1fb60382b5bae2ed72335148d25bda8",
          "lotr-rivendell" : "53f82eca68b89ad6d7bce9970a9a98482bc2585f",
+         "lotr-rivendell-original" : "e1d4c51328480a24ccc68d41801066de5f7527b4",
          "lotr-shire" : "85ce7e8901cb5d2090df57f3a0072b5c93318506",
+         "lotr-shire-original" : "5d72a83b0ce3d439fa731a5fbe73d2fecc8b4b54",
          "lotr-valley" : "7bf56e5aabe7415b037abb6929109ddb81460ebb",
+         "lotr-valley-original" : "6625be329ff581d10ca7cbe5730ac2c2ac2e1019",
          "minimal" : "679175e8dabad654fea3d6ccda02ed9dc8d23150",
-         "waves" : "a7981433b4df6221bb3ae2073cc1565379c9271c"
+         "minimal-original" : "488391449a8e91167af2ba681b61fdca7f681459",
+         "waves" : "a8df6be0aa66a6247a32b2ce1e8898ffc7beb91b",
+         "waves-original" : "fb3f9334bd62b7dce99bcc2e44ba4316ca55f5c5"
       },
       "slug" : "Cassidy-Miller",
       "title" : "Educator"
@@ -86,11 +149,20 @@
    {
       "name" : "Catrina Berka",
       "renders" : {
+         "foreground-dark" : "4868fe2efe8260e1da4778a0d9f4d3cb87ccc3fa",
+         "foreground-dark-original" : "40833113fcabdb93ba90d9f4fa51b61c7b7ed040",
+         "foreground-light" : "96f49729054ef6d68849d24c6286bc8de3fa4d68",
+         "foreground-light-original" : "3bc3f83ec44db4d40a2c6e1a2eb327ac06b24f64",
          "lotr-rivendell" : "aeb88de3f9131e44fdd778ff29f87e793d5057ca",
+         "lotr-rivendell-original" : "5ce8c10ae8b7357a00d81ccf380fe797db36e460",
          "lotr-shire" : "264f5993de2f05a75ec420ea730f1e5ab793d37a",
+         "lotr-shire-original" : "a67ccf52508556cb31844a2dae4d393587aab3bd",
          "lotr-valley" : "9f51c00da06955c7160ce1354d80697b1b1dc4ae",
+         "lotr-valley-original" : "3e7b992bf94952afe410f83935834309e924a73e",
          "minimal" : "f0fb79a4027fc1174a3883da54d63bbba6fe811d",
-         "waves" : "ca9348fee97fec9a6720ee3c74030bb44ad80306"
+         "minimal-original" : "4582ad63b9478eaeab84da11db0819814bcd7267",
+         "waves" : "daf74cb947a9707fd041fe495b0e72b8ebd85b71",
+         "waves-original" : "d9aca3252bc95ce366a76367de736736aa7aad8f"
       },
       "slug" : "Catrina-Berka",
       "title" : "Lead Educator"
@@ -98,11 +170,20 @@
    {
       "name" : "Cindy Norman",
       "renders" : {
+         "foreground-dark" : "1b77be846923a8580e48997dfc8001ff9537c1dc",
+         "foreground-dark-original" : "7d50c048721ff6465005fe5e98d3f72604242436",
+         "foreground-light" : "3ae58051693c70a9bbc24df7c2caf0d91e8ea90a",
+         "foreground-light-original" : "2e82e14f96fa3f0d57b2e8dae3ea0e931032aaa3",
          "lotr-rivendell" : "ecade36606c34ca59d27b3e4994ceac175e08511",
+         "lotr-rivendell-original" : "06ca22489616d88484599f29a9afcf6d36ad7cd2",
          "lotr-shire" : "1023167594fc24d428f39440025803dad994508d",
+         "lotr-shire-original" : "34a5a70f3f89184b533e736934f1491c3002589e",
          "lotr-valley" : "f0deb6aee8d98ab8e5e3d6821094a0e77684d5fe",
+         "lotr-valley-original" : "a1860db97d764070119f4d26845d8b30bfd2598b",
          "minimal" : "c7960752d11aedf77149b1b668b2c0b4adf1bf0c",
-         "waves" : "91e9583e8dd45be3f91e71a1952c8e3180c8bcfc"
+         "minimal-original" : "1bdee235bb37df3b7406a352e2628f44d76e9950",
+         "waves" : "4f4a298c4adbca0f1d0078ac2c09542e06108c39",
+         "waves-original" : "3bdabe337860854748e84fe39632bbbdfb70a059"
       },
       "slug" : "Cindy-Norman",
       "title" : "Business Manager"
@@ -110,11 +191,20 @@
    {
       "name" : "Danielle Meininger",
       "renders" : {
+         "foreground-dark" : "e68f1ae8b5072f0b7e74c5a95a222ddf6f0bb7b6",
+         "foreground-dark-original" : "290cf90beba5397ff7bfab6a005461f42ace0bf8",
+         "foreground-light" : "182aec7d0f05a3595095a7735fa984d40cd93c4f",
+         "foreground-light-original" : "8d8580fb9c5325cb48eee01397f7384f2cee7435",
          "lotr-rivendell" : "3293cc45f56200ca7d2b6c867ed358dd02b6b303",
+         "lotr-rivendell-original" : "f2907beab700289cc88c767261ff09d0e30d415a",
          "lotr-shire" : "edaf3156805b148c9587b1a59072270e0a997e51",
+         "lotr-shire-original" : "a9c88470020bc74cf3d5f7403d3c83c70d14fe07",
          "lotr-valley" : "c8f079267bbaeb097a3dbc02be6b35cf5480c41e",
+         "lotr-valley-original" : "c818e2d3e7ead715cbef479cec66d01fd23d52a6",
          "minimal" : "8a578d191e995989009be3022e79433228d15532",
-         "waves" : "641e7f2debd88dad7fa575b95a1695b046c11293"
+         "minimal-original" : "4d46cb6f81ea7d679d69d8f97ff60317b39f3f0d",
+         "waves" : "19abdfb54fff6363b265b70c73f48becb09b4823",
+         "waves-original" : "3e8b05bde553d371909ef9255d8f2c187e9adbf3"
       },
       "slug" : "Danielle-Meininger",
       "title" : "Support II"
@@ -122,11 +212,20 @@
    {
       "name" : "Donna Bachowski",
       "renders" : {
+         "foreground-dark" : "d03abfb52e440253cd2bc60d27c1d704db36665b",
+         "foreground-dark-original" : "872426374abe3e27464e63d0a85f17a59f55e0aa",
+         "foreground-light" : "cdb349cf2a1e558fc58586b4c0114805ff8fe7e9",
+         "foreground-light-original" : "707903afbafe147a14c34ee4af328c5f42fead8a",
          "lotr-rivendell" : "c6af9d361cb668c4fdc9aaa94089030d3c8a0421",
+         "lotr-rivendell-original" : "2e765dcd760801b7c020bdfde27d65e4a1a400a3",
          "lotr-shire" : "570f5c252826743aecfabfcc0d1ef30383641ca2",
+         "lotr-shire-original" : "0a95b59d3a6d64e43c1c2d6e599266ebf49cabb9",
          "lotr-valley" : "c7716469577caf458a18e2ad4b844faca427a89f",
+         "lotr-valley-original" : "790e03c68c6fbe2804a427f15145f019cf3883f4",
          "minimal" : "79251c0de12052a5a765b276e6c9473f320a0cfe",
-         "waves" : "2d4d969449ecf72bedf7d9889a9755e63a36b2c8"
+         "minimal-original" : "3d228a934afd44c60cd46dad053b562eb1ee1b39",
+         "waves" : "2ca9336555a280d09d4062df2290201d412b0e69",
+         "waves-original" : "16fcc0d6e54acbb69b58c0a25ad30e90f15b8c2c"
       },
       "slug" : "Donna-Bachowski",
       "title" : "Director of Implementations"
@@ -134,11 +233,20 @@
    {
       "name" : "Elise Aiello",
       "renders" : {
+         "foreground-dark" : "49a47fcec5fee53ca5d2ada0064a43f0effe6e3d",
+         "foreground-dark-original" : "989fea182aade91e800285a394eccfd0431dc9ae",
+         "foreground-light" : "2565fe70e1b6e49513670563b6779ba6efee6f00",
+         "foreground-light-original" : "9477a706a5c3292f781eda440d82dfc7232637b5",
          "lotr-rivendell" : "b1eac96594a715bdca0a00287892a19e7f58e4b8",
+         "lotr-rivendell-original" : "896fda87dc01a7ee854b119c023ddb3b5406b22d",
          "lotr-shire" : "67c81f1b68ac541a5fe6892b30480e207dd323e4",
+         "lotr-shire-original" : "4e89c123116a1ab72a3b1ede108e8060bd1685d5",
          "lotr-valley" : "ba778ce810d4cb3340481c266ea8a5e963486e44",
+         "lotr-valley-original" : "9699fa36e6dde31b31c281c514217f9720b97eb5",
          "minimal" : "fac35272f650b47ce90bfaa13301e2f6ff1a43b5",
-         "waves" : "146a52d100cce291a737dfa107fc6e60de9d3882"
+         "minimal-original" : "63a078f0cbfe2886fea667ffbf474cf8e217d3fd",
+         "waves" : "871dbefdf54067687a307c8ae0ba137cb8df39a7",
+         "waves-original" : "52223691fd253240adff9231ac0a9fbde8c01bd4"
       },
       "slug" : "Elise-Aiello",
       "title" : "Marketing Executive"
@@ -146,11 +254,20 @@
    {
       "name" : "Elise Konya",
       "renders" : {
+         "foreground-dark" : "56f010fe836f05a987c0483b6b755d02a57bd137",
+         "foreground-dark-original" : "b73233a78f3c8fe13d3149b1b2c788247d3b4042",
+         "foreground-light" : "9e10bf88c81e71a3603b0a4b82a9b9d90a0f8ab7",
+         "foreground-light-original" : "afefc1a7d187859650345c674d9435b395735cd0",
          "lotr-rivendell" : "5a97b12218154c9bb68ba95f894c188bde0aa465",
+         "lotr-rivendell-original" : "f5723fd013e0bcc1267b61b6910a1466e8926e3a",
          "lotr-shire" : "0ca27f4033fbe09b6104149a708cf1010ca958bf",
+         "lotr-shire-original" : "ab36a9753b9db199773e4c9f48c81bd2750b6ed0",
          "lotr-valley" : "3382fd708a7f46de74b6ea0638b9d77a8ba2fa00",
+         "lotr-valley-original" : "00fe57b5cce8f06ff9e53f49cc49c54e2ddae351",
          "minimal" : "48c5ef626c355f2fc791305125a367aa8e78855a",
-         "waves" : "7e270897b97cb88b500b154bf1426add552819a1"
+         "minimal-original" : "0251b71bc8803b2c3eaedc5a9f68fb8df6e876c2",
+         "waves" : "5db783a35b225df044d4c7ddd1aaaff1082d8a61",
+         "waves-original" : "e427beb6d89defbc34ee3c802b07d97a98031f4e"
       },
       "slug" : "Elise-Konya",
       "title" : "Project Manager"
@@ -158,11 +275,20 @@
    {
       "name" : "Elizabeth McArthur",
       "renders" : {
+         "foreground-dark" : "b955ee42695c4f3d5e66c1915b8ad12bde817302",
+         "foreground-dark-original" : "c06772863f34da1a515866035d2112e155e9c665",
+         "foreground-light" : "f45a2845a615cb89167ffbfa18590ccc1776a870",
+         "foreground-light-original" : "79a5224c9e0d73eb87eec5d6bf1c196835628ac4",
          "lotr-rivendell" : "639822c2dd40dcd389766fb64c09ec6fdad6895b",
+         "lotr-rivendell-original" : "009dc55d9b31ff17e8ff6834a6079fb83735fcba",
          "lotr-shire" : "b4ec66851e05b15c1488caee74ce3a674cc85162",
+         "lotr-shire-original" : "b167bd7d1f7262cfaec4075a23e07eae1759b61c",
          "lotr-valley" : "3664b444ad5731666b26f010c8eaa861634402be",
+         "lotr-valley-original" : "2f0d6d207925d588a79bb6d1d9bc6f0f17c58fc5",
          "minimal" : "e8e7a99977445a37d494058ca155c55af5446d5f",
-         "waves" : "e70d92977b83fa7d3c25a9d7a46c2c6f3b12555c"
+         "minimal-original" : "c0ac0c98b3f33b25cea6ad8948c70db7ce72bce0",
+         "waves" : "cffc6d76ce0488774ed164a03e732b1378542dda",
+         "waves-original" : "521c1c8f01da8b58f13a5449f38548bae6c27735"
       },
       "slug" : "Elizabeth-McArthur",
       "title" : "Data Migration Specialist"
@@ -170,11 +296,20 @@
    {
       "name" : "Emmanuel Fulton",
       "renders" : {
+         "foreground-dark" : "d83e8f738572a5e2bbde108dfc5f22f5b8c67d2d",
+         "foreground-dark-original" : "fadc2764f2f325e4f00116220e1fc59476ea05ad",
+         "foreground-light" : "62ee98cbffb356d574b7483e67ff0fbab7c98d9a",
+         "foreground-light-original" : "55196931d519bb54eb16108608936f0ec56b94df",
          "lotr-rivendell" : "b53b233ded3f67dea314fb9b00e2da34dceb5195",
+         "lotr-rivendell-original" : "f030efd7acbfdba97d635a377c0c34d60928c314",
          "lotr-shire" : "fb020be3955c1489b3bbcafb707abba94fe244fa",
+         "lotr-shire-original" : "6a5bc6f5973aed96875909c8cbf670fa39e5fd2a",
          "lotr-valley" : "88f2c8f5862d4cc1d1859060f517cba3b026fd99",
+         "lotr-valley-original" : "a5b823533210b00da0543423922c2b964a9ac95a",
          "minimal" : "f55e6a8445fde00fe60b2d3ccb5aa30a34d67add",
-         "waves" : "502217bfe424d023c7e25ec0f35dfa1789a7b1a5"
+         "minimal-original" : "1fb744d90f65099404a404474502e003222a837d",
+         "waves" : "9147260ead5e374fe0b748b8410f9121b1c68b35",
+         "waves-original" : "a1b5d46836c2e481652c3c38ab16fce1240bdaed"
       },
       "slug" : "Emmanuel-Fulton",
       "title" : "Systems Administrator I"
@@ -182,11 +317,20 @@
    {
       "name" : "Enica Davis",
       "renders" : {
+         "foreground-dark" : "f8a2e9a274137c121d2e24907d961478362e055a",
+         "foreground-dark-original" : "6900d2aba743ec4b905d0f549631082ae51945bf",
+         "foreground-light" : "428cc84ffe0abbec791e946b255a05ee03acc8ec",
+         "foreground-light-original" : "452e7b4d771f53acbdc1085935888eb3c2d68ebe",
          "lotr-rivendell" : "c8723e372b9237d78aa3e446add37e24e0d4bca5",
+         "lotr-rivendell-original" : "a0d5b99e82bf60676fa5c9dddbdba010414bec2f",
          "lotr-shire" : "610dd4ba4ef6272379a5ae5f7812f33d7a7627b8",
+         "lotr-shire-original" : "257e798fe1c290b45d69b37d1e2d19b7322a53fa",
          "lotr-valley" : "5269420218d6c2e8c74a10cb106c4f3d81bd9491",
+         "lotr-valley-original" : "72781e8c2f629009741354d2978b03a161c08ee7",
          "minimal" : "5c31a8e02d20e48a8b723edf7d73ec8eea276955",
-         "waves" : "73e162b49d61a2f70082cfe2418e47cd3de5198a"
+         "minimal-original" : "ca6f04501949a81eacb6d6a0d4500a1a464178b5",
+         "waves" : "4788d5455a8833f6102343e7d32f721c1579e823",
+         "waves-original" : "ddb5248f5a8d1cda4275ac06c154f1cb5b30d46a"
       },
       "slug" : "Enica-Davis",
       "title" : "Lead Data Migration Specialist"
@@ -194,11 +338,20 @@
    {
       "name" : "Eric Swenson",
       "renders" : {
+         "foreground-dark" : "892ffaf912341e3ec907f8270c3ee6398b5da426",
+         "foreground-dark-original" : "88de54dc6c4aae853e3cca4159010f7b3ae409d5",
+         "foreground-light" : "74dd0b7e4c089555ad2df82b395b0c1fea382978",
+         "foreground-light-original" : "4771692563ad5057e99fa02da77655fc8cc2b8d0",
          "lotr-rivendell" : "45e266b09c40295cdb94d52cf3e187cfd973b510",
+         "lotr-rivendell-original" : "bb321c446e5d5fc5e09b77f04acf623246dec0f7",
          "lotr-shire" : "0e4a1c2a67680162ad4b7a6ebde9937bd960ef2b",
+         "lotr-shire-original" : "5349eee3e946659e5c2fb2941477766ae524ab32",
          "lotr-valley" : "a9c6ca1122ae564485b176590c0b58ce9706b3ae",
+         "lotr-valley-original" : "8100693f18d47130dfce30d4cbc883df2697b334",
          "minimal" : "86ec154de300a4b176fc974857f9827194ba69cc",
-         "waves" : "1c2fc47fdd0de0a29d53ca06a12e221416241b1c"
+         "minimal-original" : "63813e2966315372da6cbcac125bae8c9a561fb9",
+         "waves" : "f36edaf55cf91918cf9cd7acb9e37d3787d1aa74",
+         "waves-original" : "022e25cf8793a04cd452a65c0bdc868282c0c806"
       },
       "slug" : "Eric-Swenson",
       "title" : "Implementation Support"
@@ -206,11 +359,20 @@
    {
       "name" : "Esther Melander",
       "renders" : {
+         "foreground-dark" : "cc4281b55812c51f1ebc1c60f91ba11779c49164",
+         "foreground-dark-original" : "def49a3a4d90562909762e65e189c23504f37868",
+         "foreground-light" : "71bc1d34699edb49072a4f799f3795d5c39426c5",
+         "foreground-light-original" : "31a4071bd009eb73fc474061528a1c9b4cb65627",
          "lotr-rivendell" : "548e3ce345a6e8647bcff41d65e8e14f6d40154b",
+         "lotr-rivendell-original" : "25d89c33e4e3f68026ab38a6e4dc038592de8406",
          "lotr-shire" : "cee778f0cd687a788b89d814109fd69daf6b139a",
+         "lotr-shire-original" : "a8ad3bd782d899886d2c4c753086a7f3434eba03",
          "lotr-valley" : "226b34e648ead11eb4ceed6e57a852bd5f58d715",
+         "lotr-valley-original" : "b2da1e1ac96da5976a6f877b961eb53fb856439a",
          "minimal" : "5d94f79a18c59ce3af6d0ed61267922102efe8c1",
-         "waves" : "3f6e28f5f975fbf88f629d3ee063d662c6764024"
+         "minimal-original" : "5bb3be7e4c6812ca84524aee44e5c2b275fe383e",
+         "waves" : "b8218f40d179c7e61fd0868add95c9c6bcd5d34c",
+         "waves-original" : "93c1ffe575fda5a0b318fc1fd6e35d889703a8f5"
       },
       "slug" : "Esther-Melander",
       "title" : "Educator"
@@ -218,11 +380,20 @@
    {
       "name" : "Evelyn Hartline",
       "renders" : {
+         "foreground-dark" : "2fc3563322d7c8c1fa68c95ca2506b817704c240",
+         "foreground-dark-original" : "51cd4f3743bcf1342ca658ed6ff6cf410beb8465",
+         "foreground-light" : "c54b2e4271d631c8e6bb8ebdf43c8ce01e604de9",
+         "foreground-light-original" : "bb45ebf244b9d256e0a56c05c1d4b47929da9a6a",
          "lotr-rivendell" : "2f74a2244078e014b936e266fbed7c0f98fad9f6",
+         "lotr-rivendell-original" : "b0670ade6df105f04299e068170492e0ce726755",
          "lotr-shire" : "9fe6d561dac2bc8569069867c143d2f3f7bdbd88",
+         "lotr-shire-original" : "a723b9ea783a8b0d96fb367a21962c42b2f05769",
          "lotr-valley" : "0367b9b47a4a47e4d2bd84c3ae61d819480c85e1",
+         "lotr-valley-original" : "2d6f3ea33f836513d53d5b655c7bf388ace7f5e2",
          "minimal" : "802db9e1d44ed50c78eee621e36d9bae3a93c65d",
-         "waves" : "82c46c1bb9e1f223c3641654261be2e4b3dda07d"
+         "minimal-original" : "d421e20eb31a757db3b5cbe126b25f57e7261599",
+         "waves" : "7064e436c3b594086900b37ddd4f4f0fbefcee7e",
+         "waves-original" : "88a1871e264d362fbe543b78cba946051313ffbe"
       },
       "slug" : "Evelyn-Hartline",
       "title" : "Security Operations Admin"
@@ -230,11 +401,20 @@
    {
       "name" : "Heather Harmon",
       "renders" : {
+         "foreground-dark" : "763e1ecb3b6ea2872963784871d59ba3e790aa4a",
+         "foreground-dark-original" : "ead6f218d43326571afe5f742806530a37017968",
+         "foreground-light" : "55023ba8e43d1eb11ff4a2e1901d0d2f82f8b38d",
+         "foreground-light-original" : "e9f0c50c5583d730341436c65953270138465b53",
          "lotr-rivendell" : "1a955b8de8d842ef021d96b3370518f6d213ce2e",
+         "lotr-rivendell-original" : "c98a43a1a391745d9cc4a429e14c4a77c7acb69f",
          "lotr-shire" : "ff8ea28a4cb75c3a18b61dbc1ed6b8e8b672b946",
+         "lotr-shire-original" : "637120df9ce62541d27e7ac286d5af00196cd27b",
          "lotr-valley" : "ffe50277897c24a760318749bbdad1cdfcc7d052",
+         "lotr-valley-original" : "aa6dba5d8141b9c101967b7517a1158cef347ffe",
          "minimal" : "8276b306e6b2d284264b760f304bfe755bcfdb7e",
-         "waves" : "ec4fa6af1f24ac6bbd656f7c772c6ab11b0c28c1"
+         "minimal-original" : "33840ee32e1a8237124212056932652a93af015e",
+         "waves" : "663e633f38d064fce2a9a505cf7f4625291464c7",
+         "waves-original" : "657acd9308219848bfe16ed59541dded5153daf0"
       },
       "slug" : "Heather-Harmon",
       "title" : "Project Coordinator"
@@ -242,11 +422,20 @@
    {
       "name" : "Hebah Amin-Headley",
       "renders" : {
+         "foreground-dark" : "7f545227a46f764ae7d60af69ec6fb45410aeb81",
+         "foreground-dark-original" : "5e2b6c0258f1eea26e0f898727d79b5e14331bd3",
+         "foreground-light" : "758714616cff4f06973e8791abf35a18d88bc30c",
+         "foreground-light-original" : "8197234db2c0ad6d7b76776f718831fe346334e4",
          "lotr-rivendell" : "023bff517bba9d5e959c3a20efe7ee6d1f0ae335",
+         "lotr-rivendell-original" : "ecc683120a0de6b20c5f435b757f970318f19d90",
          "lotr-shire" : "9280874d35edca486ec8d3636a03735df2296f27",
+         "lotr-shire-original" : "bb36e5ae5c86adc7b2948da799739baa85f2b6d5",
          "lotr-valley" : "b766eb4b80c91ce2397b85c5f932116d24e9071f",
+         "lotr-valley-original" : "86a3266576c227b1a08cbf3459a8a4efcfaedf6b",
          "minimal" : "e25704b9eb52512180d6da95ec921576dab40c6d",
-         "waves" : "07d471e5f68d239a90c5a944b6a62dfd56466cde"
+         "minimal-original" : "680437d568320097efd17e5b5489fab4d5ab8bb5",
+         "waves" : "f99239f7f63f486d414c88ae0d89ca198779579e",
+         "waves-original" : "a6327509d42db4d096bd6d650d2ec47117bf5664"
       },
       "slug" : "Hebah-Amin-Headley",
       "title" : "Educator"
@@ -254,11 +443,20 @@
    {
       "name" : "Holly Mills",
       "renders" : {
+         "foreground-dark" : "5f3298415a44a1af250871012818be0bd927bbd4",
+         "foreground-dark-original" : "de44cee5507b593cb81100490fd47e44ed6581d5",
+         "foreground-light" : "4fdb1c95c3690d0e4e30a51bf37ac89cf752d4bd",
+         "foreground-light-original" : "25d5c1970fd1e732a355d48681ac58e2c2afcddd",
          "lotr-rivendell" : "9afa96b2ef075cdaf001625a0d2fa47d74f1a751",
+         "lotr-rivendell-original" : "c5d2091d0907e6ffe56f15d5ed68dbafd6746842",
          "lotr-shire" : "42b36c413ee3d70ee1972ec0ba5a233d36cc74ba",
+         "lotr-shire-original" : "0349cc45261fb287f40ada07c885139ad85de73c",
          "lotr-valley" : "28022f18ddfe02e8fded418e24a1fe670284a06f",
+         "lotr-valley-original" : "02bb65c2015d19f6543a63bf9ac50eb62a2c5db5",
          "minimal" : "137da99dbc7e3bbedb24f9ca9a7602b386e437ae",
-         "waves" : "f0425f1385726f4849fa0a84f12759dec0070a33"
+         "minimal-original" : "faf35e9674478c8ad3e465b924b7a78fb6afe0ef",
+         "waves" : "6de534f0320deac31bd83d8e26d028ee596699f2",
+         "waves-original" : "adb46f5909d6a1ae81f15cf9b4698dfd6f26f5c8"
       },
       "slug" : "Holly-Mills",
       "title" : "Educator"
@@ -266,11 +464,20 @@
    {
       "name" : "Ian Walls",
       "renders" : {
+         "foreground-dark" : "51815f4db05640422cce84a12349f7805978b583",
+         "foreground-dark-original" : "ed8877990016579337977c5db6701b450979a19e",
+         "foreground-light" : "2f3b5861cc2e2e96e7896414a48a9823a4a897c0",
+         "foreground-light-original" : "8d6ff4b561051973fcbe5e86f5a962bfd6f923bc",
          "lotr-rivendell" : "16c2ed8e16c5bd987d05effecf60d3c196b13fd6",
+         "lotr-rivendell-original" : "98124820d7b956067c5ac4251436f9db8a1ab7de",
          "lotr-shire" : "d3a8344df76b5497a72b6a3ff69544401f4bc4c2",
+         "lotr-shire-original" : "69fead5badeca01b951728b44aafe5587884af07",
          "lotr-valley" : "d511c0532204664800ea12c3fc7eb95957457e3c",
+         "lotr-valley-original" : "9c341ab5c88a74bc9edc39c83cde386c8d67edda",
          "minimal" : "34c94a2b00f6639c5fb4cf313ed413368987b1f2",
-         "waves" : "ee854b362f5481c7bbbf5e8c2f96f6a960fb0ff8"
+         "minimal-original" : "76e7573d7d60906d23d26eca0c3eb4b046cc002b",
+         "waves" : "e0618856fbabdbc83ffee4630ecd3d0e02adcfdd",
+         "waves-original" : "c9de9bc01fe93dc332390792f4227d8196e7c072"
       },
       "slug" : "Ian-Walls",
       "title" : "Head of Special Projects"
@@ -278,11 +485,20 @@
    {
       "name" : "Imani Thomas",
       "renders" : {
+         "foreground-dark" : "2c205764676a24ea601199a08ab927d79ab84e8c",
+         "foreground-dark-original" : "df427c58a8ebb1a8ad18b1ede0e5f0efd531eb1b",
+         "foreground-light" : "75e4e0d26ef1a121c36edb706cdb439bb077bcf2",
+         "foreground-light-original" : "3a333875c5efee577044aac92ffd170b47ee6ad0",
          "lotr-rivendell" : "cddc1cac7efce5bcd616cc59a89166a5ff5e9dcb",
+         "lotr-rivendell-original" : "1ad5baf069df4bd99ed92de225a6167e23c17076",
          "lotr-shire" : "c4ea1ae9a1a2335637f184a8d490b377c7868237",
+         "lotr-shire-original" : "3ea6d1d9da5fa8b93867768bb71ca11c7b9fac20",
          "lotr-valley" : "965ea306d14981594b0ade0c85aca114c4f8f149",
+         "lotr-valley-original" : "24b2ff25bb4eee21f4990ce5167e0f3075f4e86c",
          "minimal" : "4bbee975edce8da5106428b701d2c137bd4e4f5f",
-         "waves" : "7a25908eb026f4d413ce0ebc449b5ee6e3b70d5a"
+         "minimal-original" : "7e1a6c19a84c716206738f94db5540f96c49a29b",
+         "waves" : "d69f6732acf09834b99e05f1fe0565b55706fced",
+         "waves-original" : "a639667b5e4de742ea20d3b909892a0cfd323276"
       },
       "slug" : "Imani-Thomas",
       "title" : "Developer II"
@@ -290,11 +506,20 @@
    {
       "name" : "Jesse Maseto",
       "renders" : {
+         "foreground-dark" : "4832545a67fb7d216e29077dd626eaf7860f8430",
+         "foreground-dark-original" : "0aaf7052c6a245ec3cdb7bfb5ddfa5d836ba5f1b",
+         "foreground-light" : "55d377b47e64bf0e1f713153fcfc3dafaaa32057",
+         "foreground-light-original" : "366b1a6601e6ced1c5b4d4f41ac1069d52976144",
          "lotr-rivendell" : "dec30c37a1b9bfd4bec3fcd38ddda703c2543940",
+         "lotr-rivendell-original" : "676de6149f64a54f290aaed87be979094643fa0b",
          "lotr-shire" : "f243f8140290f8925a78d3a88c5280be34df41d3",
+         "lotr-shire-original" : "c43ef7241f9cfb3221919a33f71a30ec68ec7cb2",
          "lotr-valley" : "e7725e355d546cba51cb55d78a0a780a51fd0fb2",
+         "lotr-valley-original" : "9e8b30fe5314d1735fdbda1538d9142412f3d6f6",
          "minimal" : "78b19a6bb10f81d27525d6ee6aec8541fd8f496d",
-         "waves" : "8b5b0f8b6443bcfeae6fb8ea54f0c499afce14bc"
+         "minimal-original" : "d05d93d9b0549f4d574c3ee3dc812b08645891d0",
+         "waves" : "78fce0be9ce37d7032de6efbc018c4a63454b758",
+         "waves-original" : "5d5a29852596ccd309d1b1ed392cec086fa3f510"
       },
       "slug" : "Jesse-Maseto",
       "title" : "Systems Ninja"
@@ -302,11 +527,20 @@
    {
       "name" : "Jessie Zairo",
       "renders" : {
+         "foreground-dark" : "fa4b289ffb6e6764db5eb7bac20bc972d06ea372",
+         "foreground-dark-original" : "005d504c2d44d47dd9e9b20095c63307e1dc99d3",
+         "foreground-light" : "eb30037de3c80abb3816721ce73c1b6db369cf99",
+         "foreground-light-original" : "1b6c15d4aeacb56dd67cf650a7d3366e8d215179",
          "lotr-rivendell" : "7d8c41598f30100c67118bbe8e14fed4289ef71c",
+         "lotr-rivendell-original" : "6c82f8f1f606aa54b2f2b9957c2170adb1d575ee",
          "lotr-shire" : "4d49491a43d766141ae888ddcf4a018973220abc",
+         "lotr-shire-original" : "7ea168f9c626bd592f733654398aa94808b0277b",
          "lotr-valley" : "36611bf37e2b3ac73ffc3e72dd80ff664674bdaf",
+         "lotr-valley-original" : "f54f6d039ffa68953c0e0d08c99376f7c2f1f91f",
          "minimal" : "8e5c1f2a9124406373003f4f37419c5ce14e2f0b",
-         "waves" : "fbb061873cbc28b362bbc15b13e8f327b2587cb0"
+         "minimal-original" : "5191d8ffc6d68fcf0e78b218da4f44ccb93dc1e1",
+         "waves" : "e7eb4bf09a65efce7a185faa2a0e4ea34eb869ab",
+         "waves-original" : "9b160bb7e55331ff7787557e50d3034efb2729e6"
       },
       "slug" : "Jessie-Zairo",
       "title" : "Vice President of Strategic Partnerships"
@@ -314,11 +548,20 @@
    {
       "name" : "Jonah Wilson",
       "renders" : {
+         "foreground-dark" : "8e8f7263a691ac1ff9a544fe73ca6f3d1bd728c2",
+         "foreground-dark-original" : "960d6414ab7b15b997395cd1efd11e1db8c37709",
+         "foreground-light" : "b10a90f887a6989f264253a99c0900455581f11d",
+         "foreground-light-original" : "665daf8e4abdb107df64e277dc5ddab1629187ed",
          "lotr-rivendell" : "132b0870e3371b1661c4ef8ffa46359b4ddbcdd0",
+         "lotr-rivendell-original" : "74f604bcf1401ecc1a26b0220108eb63fbed5f10",
          "lotr-shire" : "1aab947e42b92a3324bd3c65273cb699fe5bb613",
+         "lotr-shire-original" : "d6a23335baa5036dc7823b4e0e8e9329a200bc9a",
          "lotr-valley" : "2da7c1dd797138ea424c1227bd49be2d7268fa61",
+         "lotr-valley-original" : "e1d51b3da136fd71e36b6d6f9122e2588e52a05b",
          "minimal" : "7e0d7f071cdcec6a95953c74fdcf09386c668c44",
-         "waves" : "9a4e96c044ccfc127bf5048e0bbba2b2eaa77ec4"
+         "minimal-original" : "9f01cd90f0e62f567fca49014aa47b8003fa9e85",
+         "waves" : "988e6e7707e7c3672e37417aff3196e8ffc2da42",
+         "waves-original" : "0e52069243c621e8920b3539ce00ec442f690eb4"
       },
       "slug" : "Jonah-Wilson",
       "title" : "Developer"
@@ -326,11 +569,20 @@
    {
       "name" : "Kellie Stephens",
       "renders" : {
+         "foreground-dark" : "3874603ca6044e7624e74677e5cf207bd7c169cf",
+         "foreground-dark-original" : "25c05bccb29362aa466e5938524d1f70c4ff70db",
+         "foreground-light" : "1ff5b096c561ab872da9290eabc6644444965e0e",
+         "foreground-light-original" : "0f4acdc504fe7fefca0626adf5f151412e4f2089",
          "lotr-rivendell" : "f8c9985c7cd23ad4cb6f18ac0e8fc70d2190ef24",
+         "lotr-rivendell-original" : "baa638b542e2a2547994aeaa90bc6b17172d7e0e",
          "lotr-shire" : "5ece9e78bcc450e09c13f1bc85b269d1611c9d92",
+         "lotr-shire-original" : "d791ba74dd24862401f300c319537d59572ba7c4",
          "lotr-valley" : "28efe52d51528ed0b33679788868857c81ad6076",
+         "lotr-valley-original" : "58af4480fcff047b39986bc83013636ed832b4c7",
          "minimal" : "a0f385e7aa68b2da62fa7a719cc95e3be7a79425",
-         "waves" : "be0cd6d0cad2d80deb87add2945693b1fe593e69"
+         "minimal-original" : "352739a3b492d221a73bf57cd3e9053a9c527de4",
+         "waves" : "7760bcaa72a5dda95f3f14dfae207fca86828b2e",
+         "waves-original" : "ef9c3b3c78209beb833455f3912b851f937c4434"
       },
       "slug" : "Kellie-Stephens",
       "title" : "Sales Development Coordinator"
@@ -338,11 +590,20 @@
    {
       "name" : "Kendra Little",
       "renders" : {
+         "foreground-dark" : "07347b6d3a23a3834721dfb6f55618f33ccc16a8",
+         "foreground-dark-original" : "1bb70f6028900fadd48bbc7b771097dcc6847f2a",
+         "foreground-light" : "8211edd0514423ea9af103afc03ff54dcf26e04e",
+         "foreground-light-original" : "b487859c5fe1f2c759d4599f7fdcaefc5803261b",
          "lotr-rivendell" : "19d2372609b518efdb526ebb8c687789069f024f",
+         "lotr-rivendell-original" : "85d4a4744dd2199d3000804f55e1343b48f88944",
          "lotr-shire" : "76b5f7d3ebdeec4533734e6f3a2fec24b6b1265b",
+         "lotr-shire-original" : "626d4181b61f739335104b9e2fb5b5aacb907251",
          "lotr-valley" : "db8e52e9ee921dc2a5eb72d52c36d876569c7cf9",
+         "lotr-valley-original" : "a3a411a19f6127ad80886c20285c58759047b880",
          "minimal" : "2a5bee6bd08a704325b0e7cfe998665b6740b218",
-         "waves" : "baeb5c0d586b650233ec51554ecaabf427393bf4"
+         "minimal-original" : "24fcb101fa47cb6a9fac70782586e4d5d02763cd",
+         "waves" : "1dcc068c5d5a3964c846a6bc7c24c821b52535ff",
+         "waves-original" : "8a594ede7e0a9eb0ffd924d783bcd2807ce3cf77"
       },
       "slug" : "Kendra-Little",
       "title" : "Linux Systems Administrator"
@@ -350,11 +611,20 @@
    {
       "name" : "Krikor Makhdoumian",
       "renders" : {
+         "foreground-dark" : "1de1d34b09c4c6b34d98d75d464f25eb7e55d596",
+         "foreground-dark-original" : "be518beab4427a7f32fe64e5f44d1ace6059b096",
+         "foreground-light" : "d57ed09114e8ebd088c3e0ffc9ee28e6a1ab7295",
+         "foreground-light-original" : "6d4c15317e53185d7b2d25ef01bd5a47b08a0f29",
          "lotr-rivendell" : "e1547148a1233686033a8446f12c2c784a1d9813",
+         "lotr-rivendell-original" : "d07c0e0532d11adbd80634dbdef500c56f0cf726",
          "lotr-shire" : "c7faf234cb18d6fba4d4ecab4c9fd6541acd6cc7",
+         "lotr-shire-original" : "b70b84ee7a887fdf95677eefb566e17f4f428a72",
          "lotr-valley" : "97a0c664ed3d7b7f80a63da2b21e8c06bb9e6163",
+         "lotr-valley-original" : "bf27a92397963f31d5d98d15063d373967d195fe",
          "minimal" : "65f0fca8f20b7a7099e1bf6c73393299a11d84df",
-         "waves" : "82d52f94dc125626906d19cf56d17e58cf086cca"
+         "minimal-original" : "4f206dffc5f012d09456b432912c9b121e87219d",
+         "waves" : "7fa3332858b8ae87bedf4b2c1b8744c54ffc1ebb",
+         "waves-original" : "f5e7e2b68296b3e6b1f52706956da8362301e8ef"
       },
       "slug" : "Krikor-Makhdoumian",
       "title" : "Linux System Administrator"
@@ -362,11 +632,20 @@
    {
       "name" : "Kyle Hall",
       "renders" : {
+         "foreground-dark" : "fbf182e08fef53a6d47d8c9c024280f4a1eade2a",
+         "foreground-dark-original" : "aa319847594d99c308cbd7d2773be57a007295d6",
+         "foreground-light" : "99055521662f91ebbb4d48998b216319174ed046",
+         "foreground-light-original" : "5b112e3d074fab88354b8a634462a0607808d461",
          "lotr-rivendell" : "349ea3a1292ddc0fadc2efa33f43e38dbfce9891",
+         "lotr-rivendell-original" : "9dbcced5402103a97219feb2d4045961a6463271",
          "lotr-shire" : "539b184ab099991ea6a9e9056e82bafc044cb335",
+         "lotr-shire-original" : "47d74a12f4b788f7c14abaa21c33368ad1459c63",
          "lotr-valley" : "dec268384be7d05707e813fd80895b37383f7100",
+         "lotr-valley-original" : "599cb7aaa4fa357e2cc680728216593bb2778e95",
          "minimal" : "99ac88d2b1edbdb361d25779c02cc9b450d8a44f",
-         "waves" : "0ae0ea255c72413aed2a7e68fdf45570d4bd68bd"
+         "minimal-original" : "99f7a1817ba424e1c3d89159999a41c3800bbe8b",
+         "waves" : "6739b795b3d420a7d6348607252375ddda97a96b",
+         "waves-original" : "c763500b1c6ffbbd7ff6219c7543531d1bb0d0ce"
       },
       "slug" : "Kyle-Hall",
       "title" : "Director of Development & Operations"
@@ -374,11 +653,20 @@
    {
       "name" : "Laura Escamilla",
       "renders" : {
+         "foreground-dark" : "aa8076c4aa88745af5cda2d15513e02785889677",
+         "foreground-dark-original" : "0862026a8534ee5f3c9148f5c2655e438f2a1fe1",
+         "foreground-light" : "1ea44233e74712d5157514fc2c45953e2596a6ae",
+         "foreground-light-original" : "fa36f564e499562254a7197477c62fe7a6876ed0",
          "lotr-rivendell" : "acfb57eb0658001040b2bfa1b98f0a1a94816fb7",
+         "lotr-rivendell-original" : "0129f18cde703876715d7b6991c2063aff7ccb28",
          "lotr-shire" : "79af76b1811333e248160bc5fe72e863792462d9",
+         "lotr-shire-original" : "6211552e6c34705a79692f8fa707529b1870eb6f",
          "lotr-valley" : "9aa110ca68687b462a2c716fe6885d99c1226aae",
+         "lotr-valley-original" : "96d8405168d453d6d86642b5db86700d58ea0a35",
          "minimal" : "9586d4d1d8f0d303621ea6c4389eee1b6dff8701",
-         "waves" : "3e3077444096ed27e8f2d616529f345af0a22bf8"
+         "minimal-original" : "fff55fb6f7c81e6fee75cd8007659ca12c0cd939",
+         "waves" : "76059768136111eef6921c82dd045c0ac1639e9b",
+         "waves-original" : "b9d7f44a50f4f3750159329a44aa54b256e9b56e"
       },
       "slug" : "Laura-Escamilla",
       "title" : "Developer"
@@ -386,11 +674,20 @@
    {
       "name" : "Laura O'Neil",
       "renders" : {
+         "foreground-dark" : "c91208fb37eecac2791cfafe9ef5aedad24a03b1",
+         "foreground-dark-original" : "c869f9e5189fe011721e003a6984fe2300e47ad6",
+         "foreground-light" : "f5631a21d43bca8a6517c1fd3276f1e28c86a295",
+         "foreground-light-original" : "e7b54af105a9ab76f20875c4b63b0be2b799648f",
          "lotr-rivendell" : "846e24f3fcc8a9b79eb41d872c2f2344b8024da3",
+         "lotr-rivendell-original" : "7a84558402d2bd89cc17714f1b0290f0f55d1bd8",
          "lotr-shire" : "bb2a78aa5d92e505151e97cfd71690ea6d0539a2",
+         "lotr-shire-original" : "5c2dd9a252d0f76f133aab6961cd8778de4aed99",
          "lotr-valley" : "71687ebb01a2b7519d7ef0fd4dbd69966a79bcf7",
+         "lotr-valley-original" : "b434e1fc73d0c01c5447b17a7ade385df5071174",
          "minimal" : "4450b2a80b677a7d86794cdf414290092328894f",
-         "waves" : "a208cd9696e901a074d645d287b2b9b0ebc9b2f7"
+         "minimal-original" : "2c89afcfbe3cd119c7f3b9a83a9ba2ade30daf48",
+         "waves" : "0c6bfe436ecbaf7b1f2788a656b6a04361b1c95d",
+         "waves-original" : "be93595551542b47185418b4d4dc7839da31ed44"
       },
       "slug" : "Laura-O-Neil",
       "title" : "Operations Analyst"
@@ -398,11 +695,20 @@
    {
       "name" : "Lisette Scheer",
       "renders" : {
+         "foreground-dark" : "fb4a993c8acdcee485946a123eea849181458fb6",
+         "foreground-dark-original" : "3ed73288d5b1dc06d5fdeec7bde14d13f5881da1",
+         "foreground-light" : "95b5ccd9d7dc4bf315fb7e37145629681df273f5",
+         "foreground-light-original" : "95ea6d8f69cb7c1abe703a528922c2204c07f63d",
          "lotr-rivendell" : "a08e857192a52b945946b80fdb96c21fc0c30ca1",
+         "lotr-rivendell-original" : "a139eb44600ede63a52d47e9eaa12359cb99ce98",
          "lotr-shire" : "821d9e3abd21b5e9ea529b1e6b5e9994a1063be8",
+         "lotr-shire-original" : "64867faf0791b1a39e16e674b9ab12ea1cdfd25e",
          "lotr-valley" : "576280c1a5be648c58853502211a0c5c75094c9a",
+         "lotr-valley-original" : "7cb223ec0b491953ac8d3310a22cffa70b4dbcee",
          "minimal" : "b3a65842ffd5293a1e57faac33991df2dc620928",
-         "waves" : "e6d3930301e68f46f94a82683c67f26b28834108"
+         "minimal-original" : "f6460f1b878994b67c274f3f1d03482a8b8b1d8a",
+         "waves" : "fb8f30186405caefe31e4ec3ac7260dd5f3c2c38",
+         "waves-original" : "cf53cbfbc52e356b55fc2cd9fa674ece3dcbca5d"
       },
       "slug" : "Lisette-Scheer",
       "title" : "Developer"
@@ -410,11 +716,20 @@
    {
       "name" : "Lucas Gass",
       "renders" : {
+         "foreground-dark" : "4e31ce68452aa0b9842d3b3842ed5ed08dd10f4f",
+         "foreground-dark-original" : "2a5c4ac620b3cf9bbe9472c66e24248c12b41961",
+         "foreground-light" : "1a7b94821d72f72b88c311d564c35b57d99143bc",
+         "foreground-light-original" : "9e018fb14ef9db768b0a9b803d8c65dea76a52ce",
          "lotr-rivendell" : "99ccc11e4f2c175637c958a47643e47d658e5ae3",
+         "lotr-rivendell-original" : "ec920e5786509636ae0d821fa7c204252f8e3a2c",
          "lotr-shire" : "80f886b3a1bfdf2362a465ffd30ed3edd1eb4bf6",
+         "lotr-shire-original" : "2eb7529fb2397066a51400fd2fdef443ee69d12d",
          "lotr-valley" : "8d1a59ab8a093cd24472767d6b98eb69f583cde4",
+         "lotr-valley-original" : "9b06073e37356f96c69010a29e5b85e1d7885bfe",
          "minimal" : "f4bdb88448f464eae37ba765bde9736a3da0e41a",
-         "waves" : "6b8f18ff23055993e26491a6c2594f2911cb2980"
+         "minimal-original" : "0456917fb944624f681d80b71b78c232b7b8c198",
+         "waves" : "4cdb5deeddbdcd07a6e99075b57a3f83aed0d140",
+         "waves-original" : "78f8d58c2e78c89b2b2873e847c3453a6c24f17c"
       },
       "slug" : "Lucas-Gass",
       "title" : "Developer"
@@ -422,11 +737,20 @@
    {
       "name" : "Mark Miller",
       "renders" : {
+         "foreground-dark" : "e18adbd6b46ddaf6e7d1e4faef99cf2c385bc6bb",
+         "foreground-dark-original" : "887f381c2335063a65e0dd703a851a2b7df9e38e",
+         "foreground-light" : "7486bb6b2864c832eff6d928ac2703c162041794",
+         "foreground-light-original" : "f0df349858277eaaef95b2cf766546ba883e16b4",
          "lotr-rivendell" : "bb71044c27c02b39fc8027a9b252157f18f292a1",
+         "lotr-rivendell-original" : "56957b9f06a9ec8fa9eb1d1e4c5d02752af826c6",
          "lotr-shire" : "8a9580c53222dcacb2255b6b737bf55ebea6b6b8",
+         "lotr-shire-original" : "f123ce433fb69983d7125758d1bb03f39325f5ed",
          "lotr-valley" : "689efb35d8b664f5345a7ed34eb3a55af0470c58",
+         "lotr-valley-original" : "16238f60d0813898fb11e7ddd955faca0669fbda",
          "minimal" : "10e7bc3bce42bb22287bb69d92530caaffdb74b3",
-         "waves" : "e2d2e67e1a294338a79ceaf103b58ac2cdafc247"
+         "minimal-original" : "23c61d27aaf0a00f94443462eba5385bf2873fba",
+         "waves" : "6064c8675fce841e11fa22ee66962ac6fcbc81a2",
+         "waves-original" : "274c6b052c62b2f5be17c5ed22936c83ddf0261e"
       },
       "slug" : "Mark-Miller",
       "title" : "Data Migration Librarian"
@@ -434,11 +758,20 @@
    {
       "name" : "Michael Adamyk",
       "renders" : {
+         "foreground-dark" : "7d96fa596ecd1528007cdd6f06db500002dd5e0c",
+         "foreground-dark-original" : "0706460e4db70ac88e31976c3799ad103958f33a",
+         "foreground-light" : "6a046f4261cee470256a0de648386cc938e8d195",
+         "foreground-light-original" : "50b85f3e737fe3d3e35b96f7cef224035e9027b9",
          "lotr-rivendell" : "b557e96573b391748f0fb18cb0f358f62adddf15",
+         "lotr-rivendell-original" : "b1cde533203fe0de6c708f6693dd54fbd7afe1b3",
          "lotr-shire" : "1402c14115981dd984c491dbadca8c3b846512fc",
+         "lotr-shire-original" : "8f0ee7479cb10b03637a5a1d032ce223c14c80c5",
          "lotr-valley" : "b3e7f059e7c5eb3eec0aa657eece8d8ce277bf50",
+         "lotr-valley-original" : "7c03eab68cadd97d1ed5cf13f812890833ea72bb",
          "minimal" : "7e0d4967a7e06be490e82df6fef816b216508219",
-         "waves" : "0e548bafc638813fa32e7b1d318c9c21ca312ce2"
+         "minimal-original" : "5db229d159c173c535f5d9f4e52d19dc48822fb1",
+         "waves" : "90444b9b02a16d0d4662b9cab76574c442e34847",
+         "waves-original" : "c4c998f38e07c32dfe5be3302b5398db0c4d8cf3"
       },
       "slug" : "Michael-Adamyk",
       "title" : "Educator"
@@ -446,11 +779,20 @@
    {
       "name" : "Michael Kucsak",
       "renders" : {
+         "foreground-dark" : "7ec52dc35a1745617b3efe3d600e6d2bfe6b8988",
+         "foreground-dark-original" : "2f5da84c8c55e8f1fcee8cf2dfe5956b81d30bf6",
+         "foreground-light" : "b32e7ce4690d99b89f47ccdc7b9db3e7c3986dd6",
+         "foreground-light-original" : "3cfeb56d95bc82331a87ce6b1bfe3f05dc9a326d",
          "lotr-rivendell" : "49620bcb18bfd19e7068f44e582a350f0742fd13",
+         "lotr-rivendell-original" : "efd89fdc70806e92b3722f6878b1b6bc65d64284",
          "lotr-shire" : "2fb82ced15da1b0ef9f54b3d47245f61e1988ea5",
+         "lotr-shire-original" : "986cd4438637cc9558afbe64cfe7126a4a3b1bb4",
          "lotr-valley" : "5a13c3aed4024e4d3dff49ebe17fe909dd0f3903",
+         "lotr-valley-original" : "6fa65d2cecb8a73dc68ce006400866b8ec6645ed",
          "minimal" : "8b1ce3ffc2c03af801da243230edba942036d67e",
-         "waves" : "5851711d76009becd727356b1b31e8fc53cc5eee"
+         "minimal-original" : "a431aca295547cd0c29dc1ff25ca75ce0f4bf153",
+         "waves" : "a0a6277662bad1ea002ef0fa26a323a297ebe490",
+         "waves-original" : "6f9d75e27d5bce785e020e0c009814fe95aeb700"
       },
       "slug" : "Michael-Kucsak",
       "title" : "COO"
@@ -458,11 +800,20 @@
    {
       "name" : "Michael Maurakis",
       "renders" : {
+         "foreground-dark" : "595de65bfd8edebd198e513c0022752091940e23",
+         "foreground-dark-original" : "93461c0dd0208cbeb77c77494df902939ac39558",
+         "foreground-light" : "9299d0894e5c5b47d3a340d86b473a6c9109e4a7",
+         "foreground-light-original" : "2bd2054429f6a656da826e2e2553bd1316aab309",
          "lotr-rivendell" : "3568d3e502909f6bd1d68929f8ad31be9b25eca3",
+         "lotr-rivendell-original" : "34df48dd6cbdb67de91205dd485a5f25bb303597",
          "lotr-shire" : "2c256c7b0a5afc9a039cfb8982ec2ec008aefb36",
+         "lotr-shire-original" : "30dc6ddac7b884a503cffddd4eeb0afe24b8c035",
          "lotr-valley" : "423714c035e4e7fb0372d4ce1e391da1546b3bc4",
+         "lotr-valley-original" : "23714773b20891a5773640238c630a8c8a7f71f7",
          "minimal" : "15796a338c195b522f09ff13a808fde0b22d15c5",
-         "waves" : "a61fe25f9b39b5dca11c18046e8084df8ba71097"
+         "minimal-original" : "ab2e74357f7e4341b9ba174334ce6d7f6b25b466",
+         "waves" : "2980805f13987bbf0fcd24adb8deedf90cf6c87c",
+         "waves-original" : "ea33d21d45d7a00d55b65f967389c0fd7961f00c"
       },
       "slug" : "Michael-Maurakis",
       "title" : "Linux Administrator I"
@@ -470,11 +821,20 @@
    {
       "name" : "Nathan Curulla",
       "renders" : {
+         "foreground-dark" : "884a61fcd0c3d30e542b679e4da6aa3084b06079",
+         "foreground-dark-original" : "7487eb02443692cfc1d6e5baae658f4ad7876155",
+         "foreground-light" : "9caf0870b37e8255d5617755a8f4188bbe1bf10d",
+         "foreground-light-original" : "b53b3e5444d2d9970f924ce78c490c504d71263f",
          "lotr-rivendell" : "e59a475e0c3ef004fc5bc749bec0553b09c288ce",
+         "lotr-rivendell-original" : "5b4b7b9bf8767dca42563198ee866840e2c63f30",
          "lotr-shire" : "a49abd7214df2bf3d2de936ab08a117d554be2b4",
+         "lotr-shire-original" : "4fd8d4f643247f76e69795e88505503e8371a223",
          "lotr-valley" : "228f07bfb69bbe8afaa7ab3061956ae384b8d6a0",
+         "lotr-valley-original" : "5aefa4131d9e1606552763888f71d1846ea87117",
          "minimal" : "95daf5c9234287c9e545a9aabf28d21bbdd6a72b",
-         "waves" : "7b6303ea314f23bf98d8910fe6cd6d5b886eed39"
+         "minimal-original" : "1ee9d65ae90e3f724e4aed9f3b1b1bb213c74131",
+         "waves" : "b0ede10a4d6551f42c6c86d8498d256d077e8d95",
+         "waves-original" : "ecb44fbb1b252b6e505805eef1da879bf1af3f11"
       },
       "slug" : "Nathan-Curulla",
       "title" : "CRO"
@@ -482,11 +842,20 @@
    {
       "name" : "Nick Clemens",
       "renders" : {
+         "foreground-dark" : "21066109e164ecab6be7b0e6ee6c37dafce13d4b",
+         "foreground-dark-original" : "c09b19f656e289666b8276a8c6c86acdd2cc362c",
+         "foreground-light" : "e7ca9a947f5cba1cecfa06fca52303c3f8660998",
+         "foreground-light-original" : "4de638bfb8a4ab1a059e90a033a383bac80a13ba",
          "lotr-rivendell" : "da1000b5d8b79b902505c3a176187f865c23510e",
+         "lotr-rivendell-original" : "55491b5b61f4a881f397191724cd9148b36755bf",
          "lotr-shire" : "fbc1af21310f9911e42c875d383d17b7a50288bb",
+         "lotr-shire-original" : "a3383dd4177a6faddb9c9d00b53d111e5ebf9d5d",
          "lotr-valley" : "caf154ad48ebe2a600e74cc0888b75c71a9c411e",
+         "lotr-valley-original" : "15722409b2a8e82a653d6f400e9a3c7ef01467fc",
          "minimal" : "36eb50c9b79e043677f3cd08d6f0f41ef2194b16",
-         "waves" : "febd36adc36cd4f2eaf909195eef1935956d081f"
+         "minimal-original" : "7929b4f5fd683b6c668ff3a09b2ef94c9e06aed4",
+         "waves" : "fe497f493ed058b9f45e472e910af444a1fcfedf",
+         "waves-original" : "c2a1e7ef5b9aa801c93d47d16f595113bb06c9bc"
       },
       "slug" : "Nick-Clemens",
       "title" : "Head of Development"
@@ -494,11 +863,20 @@
    {
       "name" : "Sara Brown",
       "renders" : {
+         "foreground-dark" : "45f4eb7a94abdf1b523b4990388850da73979701",
+         "foreground-dark-original" : "8fb5de8016be2e265c9d0f1f9a93783fd897d875",
+         "foreground-light" : "73e0cf78053ae0bc7ad45ceb69f7cb1c280cd321",
+         "foreground-light-original" : "33fd23ce5e34c3b5a4ec71be1fd1ca5161cf5c60",
          "lotr-rivendell" : "246e0cbe2b7bea65a50a7f8b253d241100b2f9f5",
+         "lotr-rivendell-original" : "41d77503ac6a1d037ebdfef35f58076f46e477bc",
          "lotr-shire" : "c55f69129b50296566250beba1c078067956a599",
+         "lotr-shire-original" : "3a90fe18d3e80177d9fbdfd46a1ca132fc150b34",
          "lotr-valley" : "23fc82b6397c09e9698916af32a0f10608a6c344",
+         "lotr-valley-original" : "96e0076a079b2a73ff2501d3851c29ca4f72515b",
          "minimal" : "16bf7e88422918b93691a6a42c0c61bc7f6aa837",
-         "waves" : "6b00f52611b6bd3b46d31a6231de0a292f8d6327"
+         "minimal-original" : "c0bfd547a7629cdfdfadb553572968edf8b10bbe",
+         "waves" : "3c5d422aea5d964bbf59d8a6ec3977b68fe21496",
+         "waves-original" : "ac06e8bdaaf69fba098f7a4fe5e77d933b128851"
       },
       "slug" : "Sara-Brown",
       "title" : "Educator"
@@ -506,11 +884,20 @@
    {
       "name" : "Sara Porter",
       "renders" : {
+         "foreground-dark" : "c90306746133c611beef29333d89141b31785292",
+         "foreground-dark-original" : "cb8f94fba32788c3718a6438ffc6049868b173ab",
+         "foreground-light" : "4b7600d348f2d29518012bcc81d2d936fcf77017",
+         "foreground-light-original" : "d433a61914c660550c7405a9dc6a5097b4af041b",
          "lotr-rivendell" : "b3dce82666b8452afa5f01d276791c29132f5493",
+         "lotr-rivendell-original" : "20c5b765a5f6133c5785bf8fd88d7c863b9b223a",
          "lotr-shire" : "d00fb91c80b53a7cd54f1d4cae18a8df8b0c62a7",
+         "lotr-shire-original" : "ff213f7e8f2637fb965e2cf75dc3d6eba40a9dd1",
          "lotr-valley" : "72a6dacb61e44f78dfb9dd9d35bb86ad9f7edfe4",
+         "lotr-valley-original" : "283430a38ea8e789d4cc79c160f40f4ca491e8d2",
          "minimal" : "b0ef3931232563ea1986207a91211545081a6f16",
-         "waves" : "de05dfe93dbe8df1cda573c369ef4450d6b167a5"
+         "minimal-original" : "8fd1f04c43250f0830987b257017c5a370cac059",
+         "waves" : "603ef387be5747da03181c7d550eefd171b670e9",
+         "waves-original" : "3040c5056093a378992080adaa9a9703a80968e6"
       },
       "slug" : "Sara-Porter",
       "title" : "Data Migration Specialist"
@@ -518,11 +905,20 @@
    {
       "name" : "Sarah Maseto",
       "renders" : {
+         "foreground-dark" : "ac9651f184ce5dd8e9715bbffe8ea867aa61fd4c",
+         "foreground-dark-original" : "a2045a762d2a77e31a6c05c3a526060381d5cce8",
+         "foreground-light" : "73f0382da9d547916608267132c34cfc36c46690",
+         "foreground-light-original" : "751446fc669348609a725a0c58e2136a6e77313c",
          "lotr-rivendell" : "0946270339aeece7188a1916e48e6cbcfe4dbb27",
+         "lotr-rivendell-original" : "3cc343d89a7eba9fec2688a8d54aad81ba8b2508",
          "lotr-shire" : "05f52edd579190ef0fc36efa06da1836eff94bb6",
+         "lotr-shire-original" : "d11df6fc01885a80c7817d5fc633db2f10e3c63f",
          "lotr-valley" : "9ae2e9bc1ed67b6a189d9a49d6ac21a5d481fe5b",
+         "lotr-valley-original" : "0c98e2761c442aea3ec8870c0ebca5fce0559c5a",
          "minimal" : "590231344ed083676a5869d801d0cb4e4434d8a4",
-         "waves" : "d274a6648064e36173ca85408b646eaf1c977c5a"
+         "minimal-original" : "3d8b6bc077ce0760972b33471eca1e19089ea74d",
+         "waves" : "1345c7fa91ba42b95a2179483aae4561f33fe883",
+         "waves-original" : "65ff92e1537004ae28c36b937ca591e70d659c22"
       },
       "slug" : "Sarah-Maseto",
       "title" : "Assistant Business Manager"
@@ -530,11 +926,20 @@
    {
       "name" : "Shipra Poojary",
       "renders" : {
+         "foreground-dark" : "f5fbedcb0dcd531e0a4d6c1ffcdca265052f357f",
+         "foreground-dark-original" : "4edda4b9607848c162a5b95719383d309b3fd8cd",
+         "foreground-light" : "924aab9b5bfd9b6170a0d09dc1752fa831b864cc",
+         "foreground-light-original" : "bd52fdba6f3441045be4438673167b91943ec0bc",
          "lotr-rivendell" : "88bc47aa2fa4657664b1d9db179f00e9bbdd03fa",
+         "lotr-rivendell-original" : "48dff5d21c195e593936a2d4ad60077a6e51db4e",
          "lotr-shire" : "eafd70b83587ccd83732246c91a5fe35e5911ca2",
+         "lotr-shire-original" : "bf19f639474cbfee5600ec831f4c2ec5de509bf3",
          "lotr-valley" : "73990f02ad36b2c13799879006ff028fd5da242f",
+         "lotr-valley-original" : "d9f9b4a993b1763912a611a2872174f1261a131f",
          "minimal" : "ff9ae3a043d4382d89c3b03f9c3ba6e8a23fa32f",
-         "waves" : "5156b7d951b82237e7d90b65add3bb064aac8cd6"
+         "minimal-original" : "c27a61e8103d4280db93975df71af502fbbea658",
+         "waves" : "9a037996636b373675b060814aa498e973c35652",
+         "waves-original" : "22ae27c4e2d8a118b9d3538b6bcc5cc491157df9"
       },
       "slug" : "Shipra-Poojary",
       "title" : "Support II"
@@ -542,11 +947,20 @@
    {
       "name" : "Todd Goatley-Seals",
       "renders" : {
+         "foreground-dark" : "479de16cd0f671511a5e0002b0a79519ba3238d0",
+         "foreground-dark-original" : "a0aa9fbd0cf53727c4ef3baaed3515af15b74609",
+         "foreground-light" : "af5b4ccfff6aea33bfe431e04c1a523144e39318",
+         "foreground-light-original" : "499c469cab7d885befcb0cb9a19060fa6c7bcedb",
          "lotr-rivendell" : "b60f820f84b7e1b79fb9291a591ff6919d382819",
+         "lotr-rivendell-original" : "53a7ce49b55cf1e1ddc372989fdd5da923efbf9e",
          "lotr-shire" : "41bab5f5b3cc7aa861eb2a5d633b64287f1aab85",
+         "lotr-shire-original" : "23919ec6db53e4492e28c2ee8c5e71d13cdca20c",
          "lotr-valley" : "9fb28a6623500b44ac33d1fc79048922e5f5cf26",
+         "lotr-valley-original" : "c87c7a9a4a23add0f280023a869e8c04bcd67f3c",
          "minimal" : "d0ecfb1ae4c8f872a4942f472c6a97d65ecebc38",
-         "waves" : "3b8f7373664caeee41827ef36634e34140a1f958"
+         "minimal-original" : "eabff621ebe5fe939c63d20e55614542f5992c07",
+         "waves" : "52da8f0aafd594456a474d9aaa3b0b30e21b02ed",
+         "waves-original" : "6255816aadcba4ecaea92da05a1e8413f4476672"
       },
       "slug" : "Todd-Goatley-Seals",
       "title" : "Head of Support and Koha Evangelist"
@@ -554,11 +968,20 @@
    {
       "name" : "Tomas Cohen Arazi",
       "renders" : {
+         "foreground-dark" : "ff018b15732e30031cba279626d2ff481015cd2b",
+         "foreground-dark-original" : "baf0e4397708c808a66aa19500dfc78fd35ba020",
+         "foreground-light" : "7cb3289d42b57a55e5085333586ba25f6b478528",
+         "foreground-light-original" : "eed60d711f45585f3d012762c61c4ea313caac8a",
          "lotr-rivendell" : "481c39082445a8670115a59ad32a6b78af484d66",
+         "lotr-rivendell-original" : "e48db4362a9e3fa736a2bd31713445f46a80ac24",
          "lotr-shire" : "41d927f078807e466942abfffd50dcba0c98b29f",
+         "lotr-shire-original" : "99f236fe46b021da89547e681581db104321939f",
          "lotr-valley" : "652e09738c7013a5ba4ea58dc3d3f3077dcdda6e",
+         "lotr-valley-original" : "e3577ffca960860efb768f8997d311f3e629771e",
          "minimal" : "4b65b2039f81db3c40025aaa0c506f55e3637f9d",
-         "waves" : "491edc6246ebf5c2c33de78765cf9e22248f3061"
+         "minimal-original" : "ff5b7af593e8c405cd5977e372fd2604c056d380",
+         "waves" : "6f1fbe03d9528b4af67a89eac5f596a00e79fcef",
+         "waves-original" : "ce229e3b41110154b3df7d27a03e62a221e30f01"
       },
       "slug" : "Tomas-Cohen-Arazi",
       "title" : "Developer"
@@ -566,11 +989,20 @@
    {
       "name" : "Tristin Stagg",
       "renders" : {
+         "foreground-dark" : "1fd4da31f93594db6d833631875852584683b9df",
+         "foreground-dark-original" : "977bc853d6557fa9d7f1d9264a183095fc3953f7",
+         "foreground-light" : "509fb901c51991b56ea10b3454ef631aebe9f0c2",
+         "foreground-light-original" : "13d2f9b772cf2ddb77bfd279e97eaf7dd579f62f",
          "lotr-rivendell" : "bf68f30a2b34c0e3a3121aaa32b7bb2467aaf706",
+         "lotr-rivendell-original" : "4dd32471b31c45599f8a3297bef6a6b2f4bc440c",
          "lotr-shire" : "fc6ccbf885e0fd3bca1df2709ad502ac2dfa32f7",
+         "lotr-shire-original" : "27cab21ae1ac90e8041a32299d060de01ebf4ff2",
          "lotr-valley" : "5cfc44d0912cf57616e6cac867995ccfe67c81ce",
+         "lotr-valley-original" : "1107a016127a99ca7189535076d5919760085138",
          "minimal" : "585853ea37bf993b8e90e8b5182ef033d6c87246",
-         "waves" : "9805c00141a7c4c909deb775baf64ca884548042"
+         "minimal-original" : "bac09b3b896a35f2a5b47303fe02832d76a8ade7",
+         "waves" : "d0cc4dd551b0826ce167c54e602177aa037c5aec",
+         "waves-original" : "b8c71020b814bd4153cbb0a5e307ff79ce3e088a"
       },
       "slug" : "Tristin-Stagg",
       "title" : "Lead Systems Administrator"
@@ -578,11 +1010,20 @@
    {
       "name" : "Valerie Burnett",
       "renders" : {
+         "foreground-dark" : "d0afc03cc4aa493099ddebc8f3f3d27a6e54db3f",
+         "foreground-dark-original" : "8fa46da1402fbc24b1852fd5c8376e26edb7534d",
+         "foreground-light" : "a7495e48a04688ec1d0e10382f79d2668f6efb21",
+         "foreground-light-original" : "07ec912e4289d185e190194e74a69fa48f5efd28",
          "lotr-rivendell" : "fa0e0d9e95cca6bc488b49a0267d9da4019e7d03",
+         "lotr-rivendell-original" : "53432cc13d4a900fb39ede3504c0b643f6e6c758",
          "lotr-shire" : "a850d3123b2495336dfaaba0b2d5d4ab6989dd3b",
+         "lotr-shire-original" : "d9f6c71c3ea082a6f41a32d8458b34dde2480e50",
          "lotr-valley" : "6fd492e47cd004952f5db4b9118b8c346dbe82fa",
+         "lotr-valley-original" : "3c8dbc5937703f168fe9b6879c4d5b98be78949c",
          "minimal" : "024f29480460e64614708c1cd115c79d7e88aff9",
-         "waves" : "885ba5aa152aabd0d3f9a19eb995a5888ff4a025"
+         "minimal-original" : "60bff66432f29fa00fce8d24c615b7d78b33d7cb",
+         "waves" : "1addfbb855dcd835b19f8f0640ff8baf56d7d687",
+         "waves-original" : "3a90de301bf67599dec81e0cc9d0a46d532f4020"
       },
       "slug" : "Valerie-Burnett",
       "title" : "Data Migration Librarian"
@@ -590,11 +1031,20 @@
    {
       "name" : "Yanjun Li",
       "renders" : {
+         "foreground-dark" : "ef65b0663765b5cdf0c148b54728de0fddbfc8d0",
+         "foreground-dark-original" : "33673cd5305d6486fe5c86328560508687ec448a",
+         "foreground-light" : "5d0f6144002074e7f4bef5723d4331deb60248f0",
+         "foreground-light-original" : "8d76235a9ddada9f9d8f7c8acf32e61d16fbe9de",
          "lotr-rivendell" : "8f440adaa15ed57792f0c98d61609e452abc87f8",
+         "lotr-rivendell-original" : "c94b5e46d12035578ee91b025e7633606b46ae22",
          "lotr-shire" : "1fba313ab5286b3b907ef46b10443f649fd57dae",
+         "lotr-shire-original" : "def6c097b23df8fb0a2814e5139bb0c6809b61d0",
          "lotr-valley" : "93dfe08e42c436f5546b195e5d3e82d408b22dd5",
+         "lotr-valley-original" : "55196153be9c6dcb7bb1d46368db7497bc0fe773",
          "minimal" : "79d4c5e1a7d530fac946b4c1b52ba94bfbbcd78b",
-         "waves" : "d34895ee43a0ac698d71905c78a5bb8ab1d664d3"
+         "minimal-original" : "237f8844b545a8749eb590e3df3ac768a67e137d",
+         "waves" : "53521f179f01ecb9d030b1084e72e3bad1cdb2fd",
+         "waves-original" : "3ad0c4f007d4dc94e6d6ef5c0f34a8980e1a34ab"
       },
       "slug" : "Yanjun-Li",
       "title" : "Developer II"
@@ -602,11 +1052,20 @@
    {
       "name" : "Yannis Kwon",
       "renders" : {
+         "foreground-dark" : "8013fb072e086ff0c3df5d5c42eabb28671fbe92",
+         "foreground-dark-original" : "13456c14d1c12c7b8fd30789aa713d80278d77f2",
+         "foreground-light" : "6affea04f1f8e1f79deb8d264c2ade950ffacfdc",
+         "foreground-light-original" : "68bf8fec2d41681ba25ee2c19fe2dd81761027d4",
          "lotr-rivendell" : "21f141c72c4d0fb050cc6971f88604380e458586",
+         "lotr-rivendell-original" : "547732baedc2a2f24a81281231da1fc841fb16e9",
          "lotr-shire" : "b903355a1646199a8e96f44deca8a78cfb1258cb",
+         "lotr-shire-original" : "a683839b920a0ebf9e84f32e5f2bcb2b782666cf",
          "lotr-valley" : "e696b232123a67d121bd00de7648315596677c38",
+         "lotr-valley-original" : "9d17260316404f80af9105f2c67e5479ead0e694",
          "minimal" : "a9234ff5365924822f8b205e7830183ec962bc4f",
-         "waves" : "5fb885c7b814342b5ce5b047fc826f2072fc882f"
+         "minimal-original" : "5b13afbac4ffa78d4e6b931b394269ba1d5ce1f5",
+         "waves" : "7f3abe15a73a72fcfe8ee75c182e448104b12b83",
+         "waves-original" : "da256c90f79cc26a4c56258c014adc06ff5ac2e5"
       },
       "slug" : "Yannis-Kwon",
       "title" : "Support 1"
