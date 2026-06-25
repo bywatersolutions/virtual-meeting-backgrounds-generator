@@ -1,6 +1,7 @@
 # Video-call backgrounds — common tasks
 #
 #   make deps     install system + Perl dependencies (Debian/Ubuntu)
+#   make logos    regenerate the white/black logo assets from the master logo
 #   make test     run the test suite (no network needed)
 #   make parse    dry-run scrape of the offline fixture (no rsvg/write needed)
 #   make fetch    stage 1: scrape the live site -> data/people.yaml
@@ -15,13 +16,18 @@ FIXTURE     := test/fixtures/about-us.html
 PERL        := perl -Ilib
 COMMIT_MSG  ?= chore: render backgrounds [skip ci]
 
-.PHONY: deps test parse fetch render all force preview commit clean
+.PHONY: deps logos test parse fetch render all force preview commit clean
 
 deps:
 	sudo apt-get update
 	sudo apt-get install -y librsvg2-bin pngquant fonts-liberation libmojolicious-perl libyaml-pp-perl cpanminus
 	perl -MMojo::DOM -e 1 || sudo cpanm --notest Mojolicious
 	perl -MYAML::PP  -e 1 || sudo cpanm --notest YAML::PP
+
+# Regenerate assets/bywater_logo_{white,black}.png from the master logo.
+# Run this after changing assets/bywater_logo.png, then commit the results.
+logos:
+	$(PERL) scripts/make-mono-logos.pl
 
 test:
 	prove -Ilib t/

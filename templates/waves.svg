@@ -6,7 +6,9 @@
       {{TITLE}}       - person's title (raw)
       {{NAME_UPPER}}  - name in UPPERCASE
       {{TITLE_UPPER}} - title in UPPERCASE
-      {{LOGO}}        - data: URI of assets/bywater_logo.png
+      {{LOGO}}        - data: URI of the full-color logo (assets/bywater_logo.png)
+      {{LOGO_WHITE}}  - data: URI of the white monochrome logo (for dark areas)
+      {{LOGO_BLACK}}  - data: URI of the black monochrome logo (for light areas)
     Copy this file to make a new template; keep the placeholders you want.
   -->
   <defs>

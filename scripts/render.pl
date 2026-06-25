@@ -48,6 +48,8 @@ binmode STDERR, ':encoding(UTF-8)';
 my $ROOT         = File::Spec->rel2abs("$RealBin/..");
 my $TEMPLATE_DIR = "$ROOT/templates";
 my $LOGO_PATH    = "$ROOT/assets/bywater_logo.png";
+my $LOGO_WHITE   = "$ROOT/assets/bywater_logo_white.png";   # {{LOGO_WHITE}} — for dark backgrounds
+my $LOGO_BLACK   = "$ROOT/assets/bywater_logo_black.png";   # {{LOGO_BLACK}} — for light backgrounds
 my $PEOPLE_FILE  = $ENV{PEOPLE_FILE} // "$ROOT/data/people.yaml";
 my $OUTPUT_DIR   = $ENV{OUTPUT_DIR}  // "$ROOT/staff";
 my $WIDTH        = $ENV{WIDTH};    # optional override; default = the template's own size
@@ -59,6 +61,9 @@ my $DRY_RUN      = $ENV{DRY_RUN} ? 1 : 0;
 # ---- preflight -----------------------------------------------------------
 die "People file not found: $PEOPLE_FILE (run fetch.pl first)\n" unless -f $PEOPLE_FILE;
 die "Logo not found: $LOGO_PATH\n" unless -f $LOGO_PATH;
+for my $mono ( $LOGO_WHITE, $LOGO_BLACK ) {
+    die "Monochrome logo not found: $mono (run 'make logos')\n" unless -f $mono;
+}
 my @templates = discover_templates($TEMPLATE_DIR);
 die "No templates found in $TEMPLATE_DIR\n" unless @templates;
 unless ($DRY_RUN) {
@@ -103,7 +108,11 @@ if (-d $OUTPUT_DIR) {
 }
 
 # ---- 3. render backgrounds whose content changed -------------------------
-my $logo_uri = build_logo_uri($LOGO_PATH);
+my %logo_uri = (
+    LOGO       => build_logo_uri($LOGO_PATH),
+    LOGO_WHITE => build_logo_uri($LOGO_WHITE),
+    LOGO_BLACK => build_logo_uri($LOGO_BLACK),
+);
 my $rendered = 0;
 for my $person (@people) {
     my $slug = $person->{slug};
@@ -112,7 +121,7 @@ for my $person (@people) {
     for my $tpl (@templates) {
         (my $tname = basename($tpl)) =~ s/\.svg$//;
         my $out    = "$dir/$tname.png";
-        my $filled = fill_one($tpl, $person, $logo_uri);
+        my $filled = fill_one($tpl, $person, \%logo_uri);
         my $new_fp = fingerprint($filled);
         my $old_fp = $manifest{$slug}{renders}{$tname};
         if (needs_render($FORCE, -e $out, $old_fp, $new_fp)) {
@@ -144,7 +153,7 @@ say "Done. Rendered $rendered new file(s).";
 # ==========================================================================
 # Read a template and substitute the per-person placeholders; return the filled SVG.
 sub fill_one {
-    my ($tpl, $person, $logo) = @_;
+    my ($tpl, $person, $logos) = @_;
     open(my $tf, '<:encoding(UTF-8)', $tpl) or die "read $tpl: $!";
     local $/; my $svg = <$tf>; close $tf;
 
@@ -153,7 +162,9 @@ sub fill_one {
         TITLE       => xml_escape($person->{title}),
         NAME_UPPER  => xml_escape(uc_safe($person->{name})),
         TITLE_UPPER => xml_escape(uc_safe($person->{title})),
-        LOGO        => $logo,
+        LOGO        => $logos->{LOGO},
+        LOGO_WHITE  => $logos->{LOGO_WHITE},
+        LOGO_BLACK  => $logos->{LOGO_BLACK},
     });
 }
 

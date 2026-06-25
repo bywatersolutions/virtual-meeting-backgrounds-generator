@@ -18,13 +18,18 @@ is uc_safe('Lord of the Code'), 'LORD OF THE CODE', 'uppercase';
 is xml_escape('Dev & Ops'),   'Dev &amp; Ops',          'escapes ampersand';
 is xml_escape('a < b > "c"'), 'a &lt; b &gt; &quot;c&quot;', 'escapes <>"';
 
-my $svg = '<text>{{NAME}}</text><text>{{TITLE_UPPER}}</text><image href="{{LOGO}}"/>{{NOPE}}';
+my $svg = '<text>{{NAME}}</text><text>{{TITLE_UPPER}}</text>'
+    . '<image href="{{LOGO}}"/><image href="{{LOGO_WHITE}}"/><image href="{{LOGO_BLACK}}"/>{{NOPE}}';
 my $out = fill_template($svg, {
-    NAME => 'Kyle Hall', TITLE_UPPER => 'LORD OF THE CODE', LOGO => 'data:image/png;base64,X',
+    NAME => 'Kyle Hall', TITLE_UPPER => 'LORD OF THE CODE',
+    LOGO => 'data:image/png;base64,X',
+    LOGO_WHITE => 'data:image/png;base64,W', LOGO_BLACK => 'data:image/png;base64,B',
 });
 like $out, qr{<text>Kyle Hall</text>},        'NAME filled';
 like $out, qr{<text>LORD OF THE CODE</text>}, 'TITLE_UPPER filled';
 like $out, qr{href="data:image/png;base64,X"}, 'LOGO filled';
+like $out, qr{href="data:image/png;base64,W"}, 'LOGO_WHITE filled';
+like $out, qr{href="data:image/png;base64,B"}, 'LOGO_BLACK filled';
 like $out, qr{\{\{NOPE\}\}},                   'unknown placeholder left intact';
 
 # ---- fingerprint: stable, sensitive, unicode-safe ------------------------
