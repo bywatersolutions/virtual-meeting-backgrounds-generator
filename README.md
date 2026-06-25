@@ -127,6 +127,28 @@ are left untouched. The filename (minus `.svg`) becomes the PNG name, so
 
 Commit the new template on `main` and the workflow renders it for the whole team.
 
+## Foreground overlays (transparent)
+
+The `foreground-*` templates are a different kind of background: just your
+name/title + logo on a **transparent** canvas (no background art), so your **real
+camera background shows through**. Because they have no background `<rect>`,
+`rsvg-convert` writes them as transparent PNGs. Two variants ship so the text/logo
+stays legible whatever your real background looks like (each also has a 4:3
+`-original`), and both carry a soft halo for busy backgrounds:
+
+| Template | Ink | Use over |
+|---|---|---|
+| `foreground-dark` | white text + white logo (`{{LOGO_WHITE}}`) | **darker** real backgrounds |
+| `foreground-light` | dark text + black logo (`{{LOGO_BLACK}}`) | **lighter** real backgrounds |
+
+**How to use them — these are overlays, not virtual backgrounds.** Zoom's native
+Virtual Background **ignores PNG transparency** (it fills the frame and won't reveal
+your camera), so dropping a foreground PNG into Zoom's background picker won't do what
+you want. Instead, composite it as an overlay layer in a tool that supports
+transparency — **OBS** (or Ecamm/mmhmm): add the PNG as an image source on top of your
+camera, then select that tool's **virtual camera** in Zoom/Meet/Teams. Pick the variant
+that matches your real background's brightness.
+
 ## Running locally
 
 ```bash

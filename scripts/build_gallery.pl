@@ -83,6 +83,13 @@ sub head {
   figure { margin:0; }
   figure img { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;
                display:block; background:#0e2336; }
+  /* Transparent foreground overlays: show a checkerboard so the transparency is
+     obvious and both the white-ink and dark-ink variants stay readable. */
+  figure img.transparent {
+    background:
+      linear-gradient(45deg,#9098a2 25%,transparent 25%,transparent 75%,#9098a2 75%),
+      linear-gradient(45deg,#9098a2 25%,#b6bcc4 25%,#b6bcc4 75%,#9098a2 75%);
+    background-size:28px 28px; background-position:0 0,14px 14px; }
   figcaption { display:flex; justify-content:space-between; align-items:center;
                margin-top:6px; font-size:13px; color:var(--muted); }
   .dl { color:var(--accent); text-decoration:none; font-weight:600; }
@@ -157,8 +164,11 @@ for my $p (@people) {
     for my $tpl ( sort keys %{ $p->{renders} || {} } ) {
         my $href  = url_path("../staff/$p->{slug}/$tpl.png");
         my $label = xml_escape($tpl);
+        # Foreground overlays are transparent PNGs — flag them so the CSS shows a
+        # checkerboard behind them instead of the solid dark card background.
+        my $img_class = $tpl =~ /^foreground/ ? ' class="transparent"' : '';
         print {$pg} qq{    <figure>\n};
-        print {$pg} qq{      <a href="$href" target="_blank" rel="noopener"><img loading="lazy" src="$href" alt="$label background for $name"></a>\n};
+        print {$pg} qq{      <a href="$href" target="_blank" rel="noopener"><img$img_class loading="lazy" src="$href" alt="$label background for $name"></a>\n};
         print {$pg} qq{      <figcaption><span>$label</span><a class="dl" href="$href" download>Download</a></figcaption>\n};
         print {$pg} qq{    </figure>\n};
     }
