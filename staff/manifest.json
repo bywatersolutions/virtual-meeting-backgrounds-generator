@@ -987,27 +987,6 @@
       "title" : "Developer"
    },
    {
-      "name" : "Tristin Stagg",
-      "renders" : {
-         "foreground-dark" : "1fd4da31f93594db6d833631875852584683b9df",
-         "foreground-dark-original" : "977bc853d6557fa9d7f1d9264a183095fc3953f7",
-         "foreground-light" : "509fb901c51991b56ea10b3454ef631aebe9f0c2",
-         "foreground-light-original" : "13d2f9b772cf2ddb77bfd279e97eaf7dd579f62f",
-         "lotr-rivendell" : "bf68f30a2b34c0e3a3121aaa32b7bb2467aaf706",
-         "lotr-rivendell-original" : "4dd32471b31c45599f8a3297bef6a6b2f4bc440c",
-         "lotr-shire" : "fc6ccbf885e0fd3bca1df2709ad502ac2dfa32f7",
-         "lotr-shire-original" : "27cab21ae1ac90e8041a32299d060de01ebf4ff2",
-         "lotr-valley" : "5cfc44d0912cf57616e6cac867995ccfe67c81ce",
-         "lotr-valley-original" : "1107a016127a99ca7189535076d5919760085138",
-         "minimal" : "585853ea37bf993b8e90e8b5182ef033d6c87246",
-         "minimal-original" : "bac09b3b896a35f2a5b47303fe02832d76a8ade7",
-         "waves" : "d0cc4dd551b0826ce167c54e602177aa037c5aec",
-         "waves-original" : "b8c71020b814bd4153cbb0a5e307ff79ce3e088a"
-      },
-      "slug" : "Tristin-Stagg",
-      "title" : "Lead Systems Administrator"
-   },
-   {
       "name" : "Valerie Burnett",
       "renders" : {
          "foreground-dark" : "d0afc03cc4aa493099ddebc8f3f3d27a6e54db3f",
