@@ -33,6 +33,16 @@ close $fh;
 my $data = JSON::PP->new->utf8->decode($bytes);
 die "manifest is not a list\n" unless ref $data eq 'ARRAY';
 
+# Split backgrounds are the same for everyone, so they live in one shared folder
+# next to the manifest instead of in each person's folder.
+( my $shared_manifest = $manifest ) =~ s{[^/]+$}{_shared/manifest.json};
+my @shared_backgrounds;
+if ( open( my $sfh, '<:raw', $shared_manifest ) ) {
+    my $shared = eval { JSON::PP->new->utf8->decode(<$sfh>) };
+    close $sfh;
+    @shared_backgrounds = sort keys %$shared if ref $shared eq 'HASH';
+}
+
 my @people = sort { lc( $a->{name} ) cmp lc( $b->{name} ) } @$data;
 my $tpl_count = ( @people && ref $people[0]{renders} eq 'HASH' )
     ? scalar keys %{ $people[0]{renders} } : 0;
@@ -166,13 +176,28 @@ for my $p (@people) {
         my $label = xml_escape($tpl);
         # Foreground overlays are transparent PNGs — flag them so the CSS shows a
         # checkerboard behind them instead of the solid dark card background.
-        my $img_class = $tpl =~ /^foreground/ ? ' class="transparent"' : '';
+        my $img_class = $tpl =~ /^foreground|-split-foreground$/ ? ' class="transparent"' : '';
         print {$pg} qq{    <figure>\n};
         print {$pg} qq{      <a href="$href" target="_blank" rel="noopener"><img$img_class loading="lazy" src="$href" alt="$label background for $name"></a>\n};
         print {$pg} qq{      <figcaption><span>$label</span><a class="dl" href="$href" download>Download</a></figcaption>\n};
         print {$pg} qq{    </figure>\n};
     }
-    print {$pg} qq{  </div>\n</main>\n</body>\n</html>\n};
+    print {$pg} qq{  </div>\n};
+    if (@shared_backgrounds) {
+        print {$pg} qq{  <h2>Split backgrounds</h2>\n};
+        print {$pg} qq{  <p class="note">Each of these is the artwork only. Put it behind you, and layer the matching <strong>-split-foreground</strong> image above (your name, title and the logo) in front of you.</p>\n};
+        print {$pg} qq{  <div class="grid">\n};
+        for my $bg (@shared_backgrounds) {
+            my $href  = url_path("../staff/_shared/$bg.png");
+            my $label = xml_escape($bg);
+            print {$pg} qq{    <figure>\n};
+            print {$pg} qq{      <a href="$href" target="_blank" rel="noopener"><img loading="lazy" src="$href" alt="$label"></a>\n};
+            print {$pg} qq{      <figcaption><span>$label</span><a class="dl" href="$href" download>Download</a></figcaption>\n};
+            print {$pg} qq{    </figure>\n};
+        }
+        print {$pg} qq{  </div>\n};
+    }
+    print {$pg} qq{</main>\n</body>\n</html>\n};
     close $pg;
 }
 

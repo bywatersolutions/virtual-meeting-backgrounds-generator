@@ -10,6 +10,12 @@
 #      when something changed. The fingerprint of the filled SVG (template markup +
 #      name + title + logo) is stored in the manifest; a background is re-rendered
 #      only if that fingerprint changed, the PNG is missing, or FORCE=1 is set.
+#   4. For each template that has background art, also renders a "split" pair
+#      that stacks back into the same image: the art alone, once for everyone, as
+#      staff/_shared/<template>-split-background.png, and each person's text + logo
+#      on a transparent canvas as staff/<slug>/<template>-split-foreground.png.
+#
+# Titles are word-wrapped at TITLE_WRAP_WIDTH characters (never mid-word).
 #
 # Each template renders at its own size: 16:9 templates are 1920x1080 (the default
 # Zoom/Teams/Meet size) and the 4:3 "-original" templates are 1440x1080 (for Zoom's
@@ -39,6 +45,7 @@ use Encode qw(decode_utf8);
 use JSON::PP;
 use ByWater::MeetingBackgrounds qw(read_people slugify uc_safe xml_escape
                                    fill_template build_logo_uri
+                                   wrap_words wrap_title_text split_layers
                                    fingerprint needs_render discover_templates within_size_limit);
 
 binmode STDOUT, ':encoding(UTF-8)';
@@ -55,6 +62,8 @@ my $OUTPUT_DIR   = $ENV{OUTPUT_DIR}  // "$ROOT/staff";
 my $WIDTH        = $ENV{WIDTH};    # optional override; default = the template's own size
 my $HEIGHT       = $ENV{HEIGHT};
 my $MAX_BYTES    = $ENV{MAX_BYTES} // 5_000_000;   # per-file cap; Zoom rejects > 5 MB
+my $TITLE_WRAP_WIDTH = 20;         # titles wrap onto a new line past this many characters
+my $SHARED_DIR   = '_shared';      # holds the split backgrounds, which are the same for everyone
 my $FORCE        = $ENV{FORCE}   ? 1 : 0;
 my $DRY_RUN      = $ENV{DRY_RUN} ? 1 : 0;
 
@@ -99,6 +108,7 @@ if (-d $OUTPUT_DIR) {
         my $slug = decode_utf8($entry);
         my $path = "$OUTPUT_DIR/$slug";
         next unless -d $path;
+        next if $slug eq $SHARED_DIR;
         next if $valid_slug{$slug};
         say "Pruning '$slug' (no longer in people file)";
         remove_tree($path);
@@ -114,6 +124,29 @@ my %logo_uri = (
     LOGO_BLACK => build_logo_uri($LOGO_BLACK),
 );
 my $rendered = 0;
+
+# Split each template that has background art into its two layers. The
+# background layer has no per-person content, so it is rendered once, here.
+my %split_foreground;
+my %shared_manifest = %{ read_shared_manifest("$OUTPUT_DIR/$SHARED_DIR/manifest.json") };
+my %shared_renders;
+for my $tpl (@templates) {
+    (my $tname = basename($tpl)) =~ s/\.svg$//;
+    my ( $background, $foreground ) = split_layers( read_template($tpl) ) or next;
+    $split_foreground{$tname} = $foreground;
+
+    my $bname  = "$tname-split-background";
+    my $out    = "$OUTPUT_DIR/$SHARED_DIR/$bname.png";
+    my $new_fp = fingerprint($background);
+    if (needs_render($FORCE, -e $out, $shared_manifest{$bname}, $new_fp)) {
+        make_path("$OUTPUT_DIR/$SHARED_DIR");
+        rasterize($background, $out);
+        say "  rendered $SHARED_DIR/$bname.png";
+        $rendered++;
+    }
+    $shared_renders{$bname} = $new_fp;
+}
+
 for my $person (@people) {
     my $slug = $person->{slug};
     my $dir  = "$OUTPUT_DIR/$slug";
@@ -121,7 +154,7 @@ for my $person (@people) {
     for my $tpl (@templates) {
         (my $tname = basename($tpl)) =~ s/\.svg$//;
         my $out    = "$dir/$tname.png";
-        my $filled = fill_one($tpl, $person, \%logo_uri);
+        my $filled = fill_one(read_template($tpl), $person, \%logo_uri);
         my $new_fp = fingerprint($filled);
         my $old_fp = $manifest{$slug}{renders}{$tname};
         if (needs_render($FORCE, -e $out, $old_fp, $new_fp)) {
@@ -130,6 +163,20 @@ for my $person (@people) {
             $rendered++;
         }
         $manifest{$slug}{renders}{$tname} = $new_fp;
+
+        # The transparent text + logo half of the split pair, if this template has one.
+        next unless $split_foreground{$tname};
+        my $fname = "$tname-split-foreground";
+        $out    = "$dir/$fname.png";
+        $filled = fill_one($split_foreground{$tname}, $person, \%logo_uri);
+        $new_fp = fingerprint($filled);
+        $old_fp = $manifest{$slug}{renders}{$fname};
+        if (needs_render($FORCE, -e $out, $old_fp, $new_fp)) {
+            rasterize($filled, $out);
+            say "  rendered $slug/$fname.png";
+            $rendered++;
+        }
+        $manifest{$slug}{renders}{$fname} = $new_fp;
     }
 }
 
@@ -148,16 +195,37 @@ open(my $mf, '>:raw', "$OUTPUT_DIR/manifest.json") or die $!;
 print $mf $json;
 close $mf;
 
+if (%shared_renders) {
+    my $shared_json = JSON::PP->new->utf8->canonical->pretty->encode(\%shared_renders);
+    open(my $sf, '>:raw', "$OUTPUT_DIR/$SHARED_DIR/manifest.json") or die $!;
+    print $sf $shared_json;
+    close $sf;
+}
+
 say "Done. Rendered $rendered new file(s).";
 
 # ==========================================================================
-# Read a template and substitute the per-person placeholders; return the filled SVG.
-sub fill_one {
-    my ($tpl, $person, $logos) = @_;
+# Read a template file into a string.
+sub read_template {
+    my ($tpl) = @_;
     open(my $tf, '<:encoding(UTF-8)', $tpl) or die "read $tpl: $!";
     local $/; my $svg = <$tf>; close $tf;
+    return $svg;
+}
+
+# Substitute the per-person placeholders in a template string; return the filled SVG.
+sub fill_one {
+    my ($svg, $person, $logos) = @_;
+
+    # Wrap on the raw title so an escaped '&amp;' still counts as one character.
+    my @title_lines = wrap_words($person->{title}, $TITLE_WRAP_WIDTH);
+    ($svg, my $title_extra_height) = wrap_title_text($svg, {
+        TITLE       => [ map { xml_escape($_) } @title_lines ],
+        TITLE_UPPER => [ map { xml_escape(uc_safe($_)) } @title_lines ],
+    });
 
     return fill_template($svg, {
+        TITLE_EXTRA_HEIGHT => $title_extra_height,
         NAME        => xml_escape($person->{name}),
         TITLE       => xml_escape($person->{title}),
         NAME_UPPER  => xml_escape(uc_safe($person->{name})),
@@ -205,6 +273,19 @@ sub shrink_to_limit {
             . "(e.g. shrink any embedded raster image) or raise MAX_BYTES\n",
         $out, ( -s $out ) / 1_000_000, $max / 1_000_000
     ) unless within_size_limit(-s $out, $max);
+}
+
+# Load the shared (split background) fingerprints: { name => sha }. A missing or
+# corrupt file is treated as empty.
+sub read_shared_manifest {
+    my $path = shift;
+    return {} unless -e $path;
+    my $data = eval {
+        open(my $fh, '<:raw', $path) or die "read $path: $!\n";
+        local $/; my $bytes = <$fh>; close $fh;
+        JSON::PP->new->utf8->decode($bytes);
+    };
+    return ref $data eq 'HASH' ? $data : {};
 }
 
 # Load the previous manifest into { slug => { name, title, renders => {tpl=>sha} } }.

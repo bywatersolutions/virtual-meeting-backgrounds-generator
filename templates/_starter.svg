@@ -21,6 +21,9 @@
       {{LOGO}}        - data: URI of the full-color logo (assets/bywater_logo.png)
       {{LOGO_WHITE}}  - data: URI of the white monochrome logo (for dark areas)
       {{LOGO_BLACK}}  - data: URI of the black monochrome logo (for light areas)
+      {{TITLE_EXTRA_HEIGHT}} - px a wrapped title adds below its first line (0 if
+                        one line); {{TITLE_EXTRA_HEIGHT+118}} adds a number to it
+    Titles over 20 characters wrap onto extra lines automatically (see README).
     Use only the placeholders you want; unknown ones are left as-is. A person is
     re-rendered whenever this file, their title, or the logo changes.
   -->

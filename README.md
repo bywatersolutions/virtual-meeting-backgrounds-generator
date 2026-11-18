@@ -99,11 +99,22 @@ etc. Keep these placeholders:
 | `{{LOGO}}` | `data:` URI of the full-color `assets/bywater_logo.png` — put it in an `href`/`xlink:href` |
 | `{{LOGO_WHITE}}` | `data:` URI of the white monochrome logo (for dark backgrounds) |
 | `{{LOGO_BLACK}}` | `data:` URI of the black monochrome logo (for light backgrounds) |
+| `{{TITLE_EXTRA_HEIGHT}}` | Height in px that a wrapped title adds below its first line (`0` for a one-line title). `{{TITLE_EXTRA_HEIGHT+118}}` adds a number to it |
 
 Values are XML-escaped automatically, so `&` etc. are safe. Unknown placeholders
 are left untouched. The filename (minus `.svg`) becomes the PNG name, so
 `templates/dark.svg` → `staff/<person>/dark.png`.
 
+- **Title wrapping**: titles longer than **20 characters** wrap onto extra lines,
+  breaking only between words. This happens automatically wherever a `<text>`
+  element holds just `{{TITLE}}` or `{{TITLE_UPPER}}`: the extra lines are placed
+  under the first one using that element's `x` and 1.25 × its `font-size`. Use
+  `{{TITLE_EXTRA_HEIGHT}}` to make the rest of the design follow, e.g. an accent bar
+  with `height="{{TITLE_EXTRA_HEIGHT+118}}"`, or a bottom-anchored block wrapped in
+  `<g transform="translate(0,-{{TITLE_EXTRA_HEIGHT}})">` so it grows upward.
+- **Split layers**: keep everything that uses a placeholder (the name/title block,
+  the logo) in its own top-level element, separate from the artwork. That is how
+  the split versions are derived (see "Split backgrounds" below).
 - **Scaffolds**: any template whose name starts with `_` (like `_starter.svg`) is
   never rendered — it's there to copy from.
 - **Sizing**: each template renders at the `width`/`height` on its `<svg>` root.
@@ -134,12 +145,17 @@ name/title + logo on a **transparent** canvas (no background art), so your **rea
 camera background shows through**. Because they have no background `<rect>`,
 `rsvg-convert` writes them as transparent PNGs. Two variants ship so the text/logo
 stays legible whatever your real background looks like (each also has a 4:3
-`-original`), and both carry a soft halo for busy backgrounds:
+`-original`). The text and logo are drawn larger than in the regular backgrounds, and
+each carries a contrasting outline plus a soft glow for busy backgrounds:
 
 | Template | Ink | Use over |
 |---|---|---|
-| `foreground-dark` | white text + white logo (`{{LOGO_WHITE}}`) | **darker** real backgrounds |
-| `foreground-light` | dark text + black logo (`{{LOGO_BLACK}}`) | **lighter** real backgrounds |
+| `foreground-dark` | white text + white logo (`{{LOGO_WHITE}}`), dark outline | **darker** real backgrounds |
+| `foreground-light` | dark text + black logo (`{{LOGO_BLACK}}`), white outline | **lighter** real backgrounds |
+
+Each also has a `-bottom` version (`foreground-dark-bottom`, `foreground-light-bottom`,
+plus their 4:3 `-original` copies) with the name/title in the lower-left and the logo
+in the lower-right instead of along the top.
 
 **How to use them — these are overlays, not virtual backgrounds.** Zoom's native
 Virtual Background **ignores PNG transparency** (it fills the frame and won't reveal
@@ -148,6 +164,25 @@ you want. Instead, composite it as an overlay layer in a tool that supports
 transparency — **OBS** (or Ecamm/mmhmm): add the PNG as an image source on top of your
 camera, then select that tool's **virtual camera** in Zoom/Meet/Teams. Pick the variant
 that matches your real background's brightness.
+
+## Split backgrounds
+
+Every template that has artwork (`minimal`, `waves`, `lotr-*` and their `-original`
+copies) is also rendered as two layers that stack back into the same picture, so the
+artwork can sit **behind** you while your name, title and the logo sit **in front**:
+
+| File | What it is |
+|---|---|
+| `staff/_shared/<template>-split-background.png` | The artwork only. It is the same for everyone, so it is rendered once and shared |
+| `staff/<person>/<template>-split-foreground.png` | That person's name/title + logo in the template's colors, on a transparent canvas |
+
+No extra template files are involved. The renderer splits each template's top-level
+elements: anything containing a `{{PLACEHOLDER}}` goes to the foreground, everything
+else to the background, and `<defs>` to both. Fingerprints for the shared backgrounds
+are kept in `staff/_shared/manifest.json`.
+
+Use the background as a normal virtual background (or as the bottom layer in OBS) and
+add the foreground as an overlay layer, as described under "Foreground overlays".
 
 ## Running locally
 

@@ -9,24 +9,34 @@
     camera feeds Zoom/Meet. NOTE: Zoom's native Virtual Background does not honor
     PNG transparency, so it won't reveal your real background on its own.
 
-    A soft white halo (feDropShadow with no offset) sits behind the ink so it
-    stays legible over busy or darker patches. See README for the placeholder list.
+    A white outline (a thin rim around the ink) plus a soft glow sits behind the ink
+    so it stays legible over busy or darker patches. See README for the placeholder list.
   -->
   <defs>
     <filter id="halo" x="-10%" y="-40%" width="120%" height="180%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#FFFFFF" flood-opacity="0.9"/>
+      <!-- Outline: blur the ink's shape, then steepen the alpha so it becomes a thin, round-cornered rim -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feComponentTransfer result="rim"><feFuncA type="linear" slope="7" intercept="-0.5"/></feComponentTransfer>
+      <feFlood flood-color="#FFFFFF" flood-opacity="0.9"/>
+      <feComposite in2="rim" operator="in" result="outline"/>
+      <!-- Glow: a wide, faint blur of the same shape -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feComponentTransfer result="wide"><feFuncA type="linear" slope="1.6"/></feComponentTransfer>
+      <feFlood flood-color="#FFFFFF" flood-opacity="0.55"/>
+      <feComposite in2="wide" operator="in" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="outline"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
   <g filter="url(#halo)">
     <!-- Upper-left: name + title -->
-    <g font-family="'Helvetica Neue', Arial, sans-serif">
-      <rect x="60" y="62" width="8" height="118" rx="4" fill="#1C4A74"/>
+    <g transform="translate(-24,-24.8) scale(1.4)" font-family="'Helvetica Neue', Arial, sans-serif">
+      <rect x="60" y="62" width="8" height="{{TITLE_EXTRA_HEIGHT+118}}" rx="4" fill="#1C4A74"/>
       <text x="96" y="124" font-size="68" font-weight="700" fill="#0B1F33" letter-spacing="0.5">{{NAME}}</text>
       <text x="98" y="172" font-size="30" font-weight="400" fill="#0B1F33" opacity="0.85" letter-spacing="2.5">{{TITLE_UPPER}}</text>
     </g>
 
     <!-- Upper-right: black logo -->
-    <image x="1496" y="96" width="360" height="114.2" xlink:href="{{LOGO_BLACK}}" href="{{LOGO_BLACK}}"/>
+    <image x="1352" y="96" width="504" height="159.9" xlink:href="{{LOGO_BLACK}}" href="{{LOGO_BLACK}}"/>
   </g>
 </svg>
